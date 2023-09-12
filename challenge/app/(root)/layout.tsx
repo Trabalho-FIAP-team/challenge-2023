@@ -14,8 +14,10 @@ const RootLayout = ({
 
   return (
     <div className="h-full">
-      <Navbar />
-      <main className="md:pl-20 pt-16 h-full">
+      <div className="flex justify-center pt-8 border-b">
+        <Navbar />
+      </div>
+      <main className="h-full">
         {children}
       </main>
     </div>

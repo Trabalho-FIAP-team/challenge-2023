@@ -12,7 +12,7 @@ export const Navbar = () => {
       <div className="flex items-center">
         <Link href={'/'}>
           <div className={"md:block text-xl md:text-3xl font-bold text-primary"}>
-            <img src="./images/logo.png"/>
+            <img src="./images/logo.png" className="w-24 h-8"/>
           </div>
         </Link>
       </div>
