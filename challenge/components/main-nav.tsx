@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
+  NavigationMenuContent, NavigationMenuContentItem,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -18,39 +18,22 @@ import { Unplug } from "lucide-react"
 
 const games: { title: string; href: string; description: string }[] = [
   {
-    title: "Topeira não sei o que lá",
-    href: "/docs/primitives/alert-dialog",
+    title: "Topeira Sustentável",
+    href: "/games/topeira-sustentavel",
     description:
-      "fodase fodase fodase fodase fodase fodase fodase fodase",
+      "Acerte as topeiras que contém alimentos saudáveis",
   },
   {
-    title: "fodase",
-    href: "/docs/primitives/hover-card",
+    title: "Pacman Sustentável",
+    href: "/games/pacman-sustentável",
     description:
-      "fodase fodase fodase fodase fodase fodase fodase fodase fodase fodase",
+      "Dê a fuga nos fantasmas enquanto aprende a ser sustentável!",
   },
   {
-    title: "fodase",
+    title: "Quiz dos 5R's",
     href: "/docs/primitives/progress",
     description:
-      "fodase fodase fodase fodase fodase",
-  },
-  {
-    title: "fodse",
-    href: "/docs/primitives/scroll-area",
-    description: "fodase fodase fodase fodase fodase",
-  },
-  {
-    title: "fodase",
-    href: "/docs/primitives/tabs",
-    description:
-      "asndpijapidjapijdipasjdpiajpdiojaopidjapisjdpiasjdpiasj",
-  },
-  {
-    title: "aisjdi-pjkasd9p",
-    href: "/docs/primitives/tooltip",
-    description:
-      "aouihdouijasdipjasipdjasipdjpasij",
+      "Teste seus conhecimentos de sustentabilidade",
   },
 ]
 
@@ -85,15 +68,15 @@ export function MainNav() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="sei la">
+              <NavigationMenuContentItem href="/docs" title="sei la">
                 fodasepiajipsjaijsioçajk
-              </ListItem>
-              <ListItem href="/docs/installation" title="sei la">
+              </NavigationMenuContentItem>
+              <NavigationMenuContentItem href="/docs/installation" title="sei la">
                 aipsnipamsiçmaiçsmjaipiçamsçm
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="sei la">
+              </NavigationMenuContentItem>
+              <NavigationMenuContentItem href="/docs/primitives/typography" title="sei la">
                 a-s9djka9-jkd9-ajd9pjas
-              </ListItem>
+              </NavigationMenuContentItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -102,13 +85,13 @@ export function MainNav() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {games.map((game) => (
-                <ListItem
+                <NavigationMenuContentItem
                   key={game.title}
                   title={game.title}
                   href={game.href}
                 >
                   {game.description}
-                </ListItem>
+                </NavigationMenuContentItem>
               ))}
             </ul>
           </NavigationMenuContent>
@@ -132,28 +115,3 @@ export function MainNav() {
   )
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"

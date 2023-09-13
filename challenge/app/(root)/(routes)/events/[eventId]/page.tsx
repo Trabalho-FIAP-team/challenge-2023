@@ -1,10 +1,12 @@
+import {PageProps} from "@/lib/types";
 
+const EventIdPage = ({ params, searchParams }: PageProps)  => {
 
+    const eventId = params['eventId'];
 
-const EventIdPage = () => {
     return (
         <>
-            Event Id Page
+            {eventId}
         </>
     );
 }
