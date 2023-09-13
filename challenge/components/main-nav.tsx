@@ -58,7 +58,7 @@ export function MainNav() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-      <NavigationMenuItem>
+        <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Home
@@ -77,7 +77,7 @@ export function MainNav() {
                   >
                     <Unplug className="h-6 w-6" />
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      Eventos fodase 
+                      Eventos fodase
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Eventos fodase ajskpajsipjapçjsahsoahs
