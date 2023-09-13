@@ -20,8 +20,9 @@ export const Footer = () => {
 
 
                     <p className="mt-4 max-w-xs text-gray-500">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-                        cupiditate quae nam molestias.
+                        Buscamos criar um ambiente colaborativo e
+                        inspirador, onde as relações interpessoais se
+                        fortalecem e a consciência ambiental cresce
                     </p>
 
                     <ul className="mt-8 flex gap-6">

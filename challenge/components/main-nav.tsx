@@ -31,7 +31,7 @@ const games: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Quiz dos 5R's",
-    href: "/docs/primitives/progress",
+    href: "/games/quiz-r",
     description:
       "Teste seus conhecimentos de sustentabilidade",
   },
