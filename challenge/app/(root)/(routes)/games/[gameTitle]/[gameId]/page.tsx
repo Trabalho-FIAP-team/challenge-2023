@@ -22,7 +22,7 @@ const GameIdPage = ({
 
   return (
     <div>
-      <h1 className=" mt-20 mb-6 text-3xl font-extrabold text-gray-900 flex justify-center dark:text-white md:text-5xl lg:text-5xl" >{decodeString(params.gameTitle)}</h1>
+      <h1 className="mt-20 mb-6 text-3xl font-extrabold text-gray-900 flex justify-center dark:text-white md:text-5xl lg:text-5xl" >{decodeString(params.gameTitle)}</h1>
       <div className="flex justify-center mt-12 mb-2">
         <iframe 
           src={`https://wordwall.net/pt/embed/${params.gameId}` }
