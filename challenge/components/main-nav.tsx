@@ -35,6 +35,16 @@ const games:Game[] = [
     description: "Teste seus conhecimentos de sustentabilidade",
     gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0"
   },
+  {
+    gameTitle: "PacMan",
+    description: "Teste seus conhecimentos de sustentabilidade",
+    gameId: "3cf4624e7efc477db2b209377e35c181?themeId=23&templateId=49&fontStackId=0"
+  },
+  {
+    gameTitle: "Quiz dos 5R's",
+    description: "Teste seus conhecimentos de sustentabilidade",
+    gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0"
+  },
 ]
 
 export function MainNav() {
@@ -49,7 +59,9 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Eventos</NavigationMenuTrigger>
+          <Link href='/events'>
+            <NavigationMenuTrigger>Eventos</NavigationMenuTrigger>
+          </Link>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -97,14 +109,14 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Sobre o Projeto
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/video" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Video Pitch
             </NavigationMenuLink>

@@ -4,7 +4,7 @@
 const EventsPage = () => {
     return (
         <>
-            Events Page
+          Events Page
         </>
     );
 }
