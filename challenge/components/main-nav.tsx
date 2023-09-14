@@ -101,7 +101,7 @@ const events:Event[] =[
     eventData: "2024-02-15",
     eventText: "Participe do Simpósio de Inteligência Artificial e mergulhe no mundo da IA. Palestrantes renomados compartilharão os desenvolvimentos mais recentes em aprendizado de máquina, visão computacional e muito mais.",
     eventId: '6'
-  }
+  },
 ]
 
 export function MainNav() {
@@ -116,7 +116,7 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href='/events'>
+          <Link href='/events' legacyBehavior passHref>
             <NavigationMenuTrigger>Eventos</NavigationMenuTrigger>
           </Link>
           <NavigationMenuContent>
@@ -132,7 +132,7 @@ export function MainNav() {
                       Eventos em Alta!
                     </div>
                     <p className="text-sm leading-tight dark:text-white">
-                      Eventos que a galera mais t
+                      Eventos mais esperados pela galera!
                     </p>
                   </a>
                 </NavigationMenuLink>
