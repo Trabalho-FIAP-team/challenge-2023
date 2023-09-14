@@ -124,7 +124,7 @@ export function MainNav() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-r from-emerald-500 to-lime-600 p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-r to-lime-700 from-lime-500 p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <Flame className="h-6 w-6"/>
