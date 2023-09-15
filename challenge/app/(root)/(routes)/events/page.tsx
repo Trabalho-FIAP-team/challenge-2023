@@ -3,17 +3,17 @@ import EventCard from './components/event-card';
 
 const events:Event[] =[
   {
-    imagem: "https://picsum.photos/id/200/348/185",
-    imagem_post: "https://picsum.photos/id/200/800/400",
-    eventTitle: "Workshop de Eficiência Elétrica",
+    imagem: "id/200/348/185",
+    imagem_post: "id/200/800/400",
+    eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
     eventText: "Junte-se a nós no Workshop de Eficiência Energética da Schneider Electric, onde exploraremos as melhores práticas e soluções para otimizar o consumo de energia em diversos setores. Especialistas da empresa irão compartilhar suas visões e experiências, e você terá a oportunidade de interagir e aprender com colegas de diversas áreas.",
     eventId: '1'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagem_post: "https://picsum.photos/id/201/800/400",
+    imagem: "id/201/348/185",
+    imagem_post: "id/201/800/400",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Innovation Institute",
     eventData: "2023-10-20",
@@ -21,8 +21,8 @@ const events:Event[] =[
     eventId: '2'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagem_post: "https://picsum.photos/id/202/800/400",
+    imagem: "id/202/348/185",
+    imagem_post: "id/202/800/400",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -30,17 +30,17 @@ const events:Event[] =[
     eventId: '3'
   },
   {
-    imagem: "https://picsum.photos/id/203/348/185",
-    imagem_post: "https://picsum.photos/id/203/800/400",
-    eventTitle: "Workshop de Desenvolvimento de Aplicativos",
+    imagem: "id/203/348/185",
+    imagem_post: "id/203/800/400",
+    eventTitle: "Workshop de Desenvolvimento de",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de Aplicativos e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '4'
   },
   {
-    imagem: "https://picsum.photos/id/204/348/185",
-    imagem_post: "https://picsum.photos/id/204/800/400",
+    imagem: "id/204/348/185",
+    imagem_post: "id/204/800/400",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -48,8 +48,8 @@ const events:Event[] =[
     eventId: '5'
   },
   {
-    imagem: "https://picsum.photos/id/205/348/185",
-    imagem_post: "https://picsum.photos/id/205/800/400",
+    imagem: "id/211/348/185",
+    imagem_post: "id/211/800/400",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Innovations",
     eventData: "2024-02-15",
@@ -57,17 +57,17 @@ const events:Event[] =[
     eventId: '6'
   },
   {
-    imagem: "https://picsum.photos/id/200/348/185",
-    imagem_post: "https://picsum.photos/id/200/800/400",
-    eventTitle: "Workshop de Eficiência Elétrica",
+    imagem: "id/200/348/185",
+    imagem_post: "id/200/800/400",
+    eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
     eventText: "Junte-se a nós no Workshop de Eficiência Energética da Schneider Electric, onde exploraremos as melhores práticas e soluções para otimizar o consumo de energia em diversos setores. Especialistas da empresa irão compartilhar suas visões e experiências, e você terá a oportunidade de interagir e aprender com colegas de diversas áreas.",
     eventId: '1'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagem_post: "https://picsum.photos/id/201/800/400",
+    imagem: "id/201/348/185",
+    imagem_post: "id/201/800/400",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Innovation Institute",
     eventData: "2023-10-20",
@@ -75,8 +75,8 @@ const events:Event[] =[
     eventId: '2'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagem_post: "https://picsum.photos/id/202/800/400",
+    imagem: "id/202/348/185",
+    imagem_post: "id/202/800/400",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -84,17 +84,17 @@ const events:Event[] =[
     eventId: '3'
   },
   {
-    imagem: "https://picsum.photos/id/203/348/185",
-    imagem_post: "https://picsum.photos/id/203/800/400",
-    eventTitle: "Workshop de Desenvolvimento de Aplicativos",
+    imagem: "id/203/348/185",
+    imagem_post: "id/203/800/400",
+    eventTitle: "Workshop de Desenvolvimento de",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de Aplicativos e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '4'
   },
   {
-    imagem: "https://picsum.photos/id/204/348/185",
-    imagem_post: "https://picsum.photos/id/204/800/400",
+    imagem: "id/204/348/185",
+    imagem_post: "id/204/800/400",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -102,8 +102,8 @@ const events:Event[] =[
     eventId: '5'
   },
   {
-    imagem: "https://picsum.photos/id/205/348/185",
-    imagem_post: "https://picsum.photos/id/205/800/400",
+    imagem: "id/211/348/185",
+    imagem_post: "id/211/800/400",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Innovations",
     eventData: "2024-02-15",
@@ -111,17 +111,17 @@ const events:Event[] =[
     eventId: '6'
   },
   {
-    imagem: "https://picsum.photos/id/200/348/185",
-    imagem_post: "https://picsum.photos/id/200/800/400",
-    eventTitle: "Workshop de Eficiência Elétrica",
+    imagem: "id/200/348/185",
+    imagem_post: "id/200/800/400",
+    eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
     eventText: "Junte-se a nós no Workshop de Eficiência Energética da Schneider Electric, onde exploraremos as melhores práticas e soluções para otimizar o consumo de energia em diversos setores. Especialistas da empresa irão compartilhar suas visões e experiências, e você terá a oportunidade de interagir e aprender com colegas de diversas áreas.",
     eventId: '1'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagem_post: "https://picsum.photos/id/201/800/400",
+    imagem: "id/201/348/185",
+    imagem_post: "id/201/800/400",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Innovation Institute",
     eventData: "2023-10-20",
@@ -129,8 +129,8 @@ const events:Event[] =[
     eventId: '2'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagem_post: "https://picsum.photos/id/202/800/400",
+    imagem: "id/202/348/185",
+    imagem_post: "id/202/800/400",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -138,17 +138,17 @@ const events:Event[] =[
     eventId: '3'
   },
   {
-    imagem: "https://picsum.photos/id/203/348/185",
-    imagem_post: "https://picsum.photos/id/203/800/400",
-    eventTitle: "Workshop de Desenvolvimento de Aplicativos",
+    imagem: "id/203/348/185",
+    imagem_post: "id/203/800/400",
+    eventTitle: "Workshop de Desenvolvimento de",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de Aplicativos e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '4'
   },
   {
-    imagem: "https://picsum.photos/id/204/348/185",
-    imagem_post: "https://picsum.photos/id/204/800/400",
+    imagem: "id/204/348/185",
+    imagem_post: "id/204/800/400",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -156,8 +156,8 @@ const events:Event[] =[
     eventId: '5'
   },
   {
-    imagem: "https://picsum.photos/id/205/348/185",
-    imagem_post: "https://picsum.photos/id/205/800/400",
+    imagem: "id/211/348/185",
+    imagem_post: "id/211/800/400",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Innovations",
     eventData: "2024-02-15",
@@ -165,17 +165,17 @@ const events:Event[] =[
     eventId: '6'
   },
   {
-    imagem: "https://picsum.photos/id/200/348/185",
-    imagem_post: "https://picsum.photos/id/200/800/400",
-    eventTitle: "Workshop de Eficiência Elétrica",
+    imagem: "id/200/348/185",
+    imagem_post: "id/200/800/400",
+    eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
     eventText: "Junte-se a nós no Workshop de Eficiência Energética da Schneider Electric, onde exploraremos as melhores práticas e soluções para otimizar o consumo de energia em diversos setores. Especialistas da empresa irão compartilhar suas visões e experiências, e você terá a oportunidade de interagir e aprender com colegas de diversas áreas.",
     eventId: '1'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagem_post: "https://picsum.photos/id/201/800/400",
+    imagem: "id/201/348/185",
+    imagem_post: "id/201/800/400",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Innovation Institute",
     eventData: "2023-10-20",
@@ -183,8 +183,8 @@ const events:Event[] =[
     eventId: '2'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagem_post: "https://picsum.photos/id/202/800/400",
+    imagem: "id/202/348/185",
+    imagem_post: "id/202/800/400",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -192,17 +192,17 @@ const events:Event[] =[
     eventId: '3'
   },
   {
-    imagem: "https://picsum.photos/id/203/348/185",
-    imagem_post: "https://picsum.photos/id/203/800/400",
-    eventTitle: "Workshop de Desenvolvimento de Aplicativos",
+    imagem: "id/203/348/185",
+    imagem_post: "id/203/800/400",
+    eventTitle: "Workshop de Desenvolvimento de",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de Aplicativos e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '4'
   },
   {
-    imagem: "https://picsum.photos/id/204/348/185",
-    imagem_post: "https://picsum.photos/id/204/800/400",
+    imagem: "id/204/348/185",
+    imagem_post: "id/204/800/400",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -210,8 +210,8 @@ const events:Event[] =[
     eventId: '5'
   },
   {
-    imagem: "https://picsum.photos/id/205/348/185",
-    imagem_post: "https://picsum.photos/id/205/800/400",
+    imagem: "id/211/348/185",
+    imagem_post: "id/211/800/400",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Innovations",
     eventData: "2024-02-15",

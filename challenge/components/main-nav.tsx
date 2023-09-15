@@ -49,8 +49,8 @@ const games:Game[] = [
 
 const events:Event[] =[
   {
-    imagem: "https://picsum.photos/id/200/348/185",
-    imagem_post: "https://picsum.photos/id/200/800/400",
+    imagem: "id/200/348/185",
+    imagem_post: "id/200/800/400",
     eventTitle: "Workshop de Eficiência Elétrica",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
@@ -58,8 +58,8 @@ const events:Event[] =[
     eventId: '1'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagem_post: "https://picsum.photos/id/201/800/400",
+    imagem: "id/201/348/185",
+    imagem_post: "id/201/800/400",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Innovation Institute",
     eventData: "2023-10-20",
@@ -67,8 +67,8 @@ const events:Event[] =[
     eventId: '2'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagem_post: "https://picsum.photos/id/202/800/400",
+    imagem: "id/202/348/185",
+    imagem_post: "id/202/800/400",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -76,8 +76,8 @@ const events:Event[] =[
     eventId: '3'
   },
   {
-    imagem: "https://picsum.photos/id/203/348/185",
-    imagem_post: "https://picsum.photos/id/203/800/400",
+    imagem: "id/203/348/185",
+    imagem_post: "id/203/800/400",
     eventTitle: "Workshop de Desenvolvimento de Aplicativos",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
@@ -85,8 +85,8 @@ const events:Event[] =[
     eventId: '4'
   },
   {
-    imagem: "https://picsum.photos/id/204/348/185",
-    imagem_post: "https://picsum.photos/id/204/800/400",
+    imagem: "id/204/348/185",
+    imagem_post: "id/204/800/400",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -94,8 +94,8 @@ const events:Event[] =[
     eventId: '5'
   },
   {
-    imagem: "https://picsum.photos/id/205/348/185",
-    imagem_post: "https://picsum.photos/id/205/800/400",
+    imagem: "id/205/348/185",
+    imagem_post: "id/205/800/400",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Innovations",
     eventData: "2024-02-15",
@@ -143,7 +143,7 @@ export function MainNav() {
                   title={event.eventTitle}
                   href={`/events/${event.eventTitle}/${event.eventId}`}
                 >
-                  teste
+                  teste teste teste
                 </NavigationMenuContentItem>
               ))}
             </ul>
