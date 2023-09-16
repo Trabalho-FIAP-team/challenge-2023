@@ -2,6 +2,7 @@ import * as React from "react";
 import {cn} from "@/lib/utils";
 import {BadgeCheck} from "lucide-react";
 import {Logo} from "@/components/logo";
+import {SectionTitle} from "@/components/ui/section";
 
 const LearnWithUs = React.forwardRef<
     HTMLDivElement,
@@ -28,9 +29,7 @@ const LearnWithUs = React.forwardRef<
                     <Logo />
                 </div>
 
-                <h2 className="text-3xl font-semibold leading-none tracking-tight mb-12">
-                    Aprendendo com EcoConnect
-                </h2>
+                <SectionTitle className="mb-8">Aprendendo com EcoConnect</SectionTitle>
 
                 <ul className="space-y-6">
                     {data.map((item, index) => (

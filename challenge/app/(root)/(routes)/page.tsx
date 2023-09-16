@@ -5,14 +5,11 @@ import Testimonials from "@/components/testimonials";
 
 export default function RootPage() {
   return (
-    <main className="w-center">
-      <Hero className="mt-20" />
-
-      <Pros className="mt-20" />
-
-      <LearnWithUs className="mt-20  py-10" />
-
-      <Testimonials className="mt-20" />
+    <main className="w-center mt-20 space-y-20">
+      <Hero />
+      <Pros />
+      <LearnWithUs className="py-6" />
+      <Testimonials  />
     </main>
   )
 }

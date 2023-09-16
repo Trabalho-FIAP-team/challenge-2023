@@ -3,7 +3,7 @@
 import * as React from "react";
 import {cn} from "@/lib/utils";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Pagination, Scrollbar, A11y, Autoplay, History  } from 'swiper/modules';
 
 import { testimonials } from "@/data";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import {SectionHeader, SectionSubtitle, SectionTitle} from "@/components/ui/section";
 
 const autoplayOptions = {
     delay:5000,
@@ -23,34 +24,41 @@ const Testimonials = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-    <div className={cn("", className)}>
+    <section className={cn("", className)}>
+
+        <SectionHeader variant={"center"}>
+            <SectionTitle>Depoimentos</SectionTitle>
+            <SectionSubtitle>A Ideologia que Impulsiona Nossa Empresa</SectionSubtitle>
+        </SectionHeader>
+
         <Swiper  spaceBetween={50}
                  slidesPerView={3}
                  pagination={{ clickable: true }}
                  autoplay={autoplayOptions}
-                 modules={[Autoplay, Pagination, Scrollbar, A11y]}
+                 modules={[Autoplay, Pagination, Scrollbar, A11y, History ]}
+                 className="!pb-12"
                 /* onSlideChange={() => console.log('slide change')}
                  onSwiper={(swiper) => console.log(swiper)}*/>
 
             { testimonials.map((testimonial, index) => (
-                <SwiperSlide>
-                    <Card>
+                <SwiperSlide className="!h-auto" key={index}>
+                    <Card className="h-full">
                         <CardHeader>
                             <Avatar>
                                 <AvatarImage src="https://github.com/shadcn.png" />
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar>
                             <CardTitle>{testimonial.name}</CardTitle>
-                            <CardDescription className="text-green-600 font-semibold">{testimonial.role}, {testimonial.company}</CardDescription>
+                            <CardDescription className="text-lime-600 font-semibold">{testimonial.role}, {testimonial.company}</CardDescription>
                         </CardHeader>
-                        <CardContent>
-                            {testimonial.text}
+                        <CardContent className="text-gray-500 italic">
+                            "{testimonial.text}"
                         </CardContent>
                     </Card>
                 </SwiperSlide>
             ))}
         </Swiper>
-    </div>
+    </section>
 ))
 
 export default Testimonials;
