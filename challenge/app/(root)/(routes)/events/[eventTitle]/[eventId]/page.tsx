@@ -1,5 +1,4 @@
 
-import { Card } from "@/components/ui/card";
 import { events } from "@/data"
 import { NotificationCard } from "@/components/notification-card";
 

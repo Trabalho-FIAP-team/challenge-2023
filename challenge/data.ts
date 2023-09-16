@@ -1,8 +1,8 @@
 
-import { Event, Game } from "@/types"
+import { Event, Game, teamMember } from "@/types"
 
 
-export const events:Event[] =[
+export const events:Event[] = [
   {
     imagem: "https://picsum.photos/id/247/348/185",
     imagemEvent: "https://picsum.photos/id/247/1520/318",
@@ -33,10 +33,10 @@ export const events:Event[] =[
   {
     imagem: "https://picsum.photos/id/218/348/185",
     imagemEvent: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de Desenvolvimento de",
+    eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '4'
   },
   {
@@ -87,10 +87,10 @@ export const events:Event[] =[
   {
     imagem: "https://picsum.photos/id/218/348/185",
     imagemEvent: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de Desenvolvimento de",
+    eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '10'
   },
   {
@@ -141,10 +141,10 @@ export const events:Event[] =[
   {
     imagem: "https://picsum.photos/id/218/348/185",
     imagemEvent: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de Desenvolvimento de",
+    eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '16'
   },
   {
@@ -195,10 +195,10 @@ export const events:Event[] =[
   {
     imagem: "https://picsum.photos/id/218/348/185",
     imagemEvent: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de Desenvolvimento de",
+    eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de Desenvolvimento de e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '22'
   },
   {
@@ -253,4 +253,45 @@ export const games:Game[] = [
     description: "Teste seus conhecimentos de sustentabilidade",
     gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0"
   },
+]
+
+export const team: teamMember[] = [
+  {
+    name: "Rafael Jesus",
+    memberRm: "98296",
+    description: "Responsável pelo desenvolvimento do site",
+    image: 'https://github.com/RafaelRMJesus.png',
+    github: 'RafaelRMJesus',
+    instagram: '#'
+  },
+  {
+    name: "Henrique Melo",
+    memberRm: "99397",
+    description: "Responsável pelo desenvolvimento do site",
+    image: 'https://github.com/hemelo.png',
+    github: 'hemelo',
+  },
+  {
+    name: "Eduardo Oliveira",
+    memberRm: "98778",
+    description: "Responsável pelo desenvolvimento do Video Pitch",
+    image: 'https://github.com/duardolv.png',
+    github: 'duardolv',
+    instagram: 'duardolv'
+  },
+  {
+    name: "Vinícius Britto",
+    memberRm: "99655",
+    description: "Responsável pelo desenvolvimento do Video Pitch",
+    image: 'https://github.com/SmileySZ.png',
+    github: 'SmileySZ',
+  },
+  {
+    name: "Rafael Cordeiro",
+    memberRm: "97668",
+    description: "Responsável pelo desenvolvimento do Video Pitch",
+    image: 'https://github.com/fodase.png',
+    github: 'rafaeldossantos04',
+    instagram: 'rafaeldossantos04'
+  }
 ]

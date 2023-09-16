@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Toaster } from 'react-hot-toast' 
 
 const font = Poppins({ 
   subsets: ['latin'], 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={font.className}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Toaster />
             {children}
           </ThemeProvider>
         </body>

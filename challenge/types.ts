@@ -1,3 +1,4 @@
+import { Url } from "next/dist/shared/lib/router/router";
 
 export interface Game {
   gameTitle: string; 
@@ -13,4 +14,13 @@ export interface Event {
   eventData: string;
   eventText: string;
   eventId: string;
+}
+
+export interface teamMember {
+  name: string;
+  memberRm: string;
+  description: string;
+  image: string;
+  github: string;
+  instagram?: string;
 }
