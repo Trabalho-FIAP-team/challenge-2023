@@ -18,7 +18,7 @@ const LearnWithUs = React.forwardRef<
     ]
 
     return (
-        <section className={cn("flex flex-col md:flex-row items-center gap-8 md:gap-20 xl:gap-36 py-20", className)}>
+        <section className={cn("flex flex-col md:flex-row items-center gap-8 md:gap-20 xl:gap-36", className)}>
             <div className="w-full md:w-6/12 xl:pl-36">
                 <img src={"/images/learn-with-us.svg"} className="w-full" alt="Learn with us" />
             </div>

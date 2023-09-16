@@ -1,6 +1,7 @@
 import Hero from "@/components/hero";
 import Pros from "@/components/pros";
 import LearnWithUs from "@/components/learn-with-us";
+import Testimonials from "@/components/testimonials";
 
 export default function RootPage() {
   return (
@@ -9,7 +10,9 @@ export default function RootPage() {
 
       <Pros className="mt-20" />
 
-      <LearnWithUs className="mt-20" />
+      <LearnWithUs className="mt-20  py-10" />
+
+      <Testimonials className="mt-20" />
     </main>
   )
 }

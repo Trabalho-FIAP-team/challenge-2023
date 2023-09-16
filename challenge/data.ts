@@ -1,8 +1,8 @@
 
-import { Event, Game, teamMember } from "@/types"
+import {Event, Game, TeamMember, Testimonial} from "@/types"
 
 
-export const events:Event[] = [
+export const events: Event[] = [
   {
     imagem: "https://picsum.photos/id/247/348/185",
     imagemEvent: "https://picsum.photos/id/247/1520/318",
@@ -255,7 +255,7 @@ export const games:Game[] = [
   },
 ]
 
-export const team: teamMember[] = [
+export const team: TeamMember[] = [
   {
     name: "Rafael Jesus",
     memberRm: "98296",
@@ -270,6 +270,7 @@ export const team: teamMember[] = [
     description: "Responsável pelo desenvolvimento do site",
     image: 'https://github.com/hemelo.png',
     github: 'hemelo',
+    instagram: 'hmelo2509'
   },
   {
     name: "Eduardo sei la",
@@ -293,5 +294,38 @@ export const team: teamMember[] = [
     image: 'https://github.com/fodase.png',
     github: 'rafaeldossantos04',
     instagram: 'rafaeldossantos04'
+  }
+]
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Jane Doe",
+    role: "Diretora Executiva",
+    company: "GreenSolutions",
+    text: "Nossa parceria com a Schneider Electric trouxe inovação e sustentabilidade para nosso negócio, transformando nossa visão em realidade."
+  },
+  {
+    name: "André Souza",
+    role: "Especialista em Energia Renovável",
+    company: "Schneider Electric",
+    text: "Minha carreira na Schneider Electric me permitiu ser parte ativa na transformação do setor energético. Estamos moldando um futuro sustentável e sou grato por fazer parte desse movimento."
+  },
+  {
+    name: "Mark Smith",
+    role: "Fundador",
+    company: "EcoTech Innovations",
+    text: "A Schneider Electric provou ser uma parceira fundamental em nossa jornada rumo à sustentabilidade, fornecendo soluções inteligentes e comprometimento com o meio ambiente."
+  },
+  {
+    name: "Sarah Jones",
+    role: "Gerente de Operações",
+    company: "EarthCare",
+    text: "A Schneider Electric está à frente quando se trata de criar soluções inovadoras para um futuro sustentável. É uma parceria que valorizamos muito."
+  },
+  {
+    name: "Maria Silva",
+    role: "Engenheira de Sustentabilidade",
+    company: "Schneider Electric",
+    text: "Na Schneider Electric, encontrei um ambiente que valoriza a inovação e o compromisso com um planeta mais verde. Estou orgulhosa de fazer parte dessa jornada rumo à sustentabilidade."
   }
 ]

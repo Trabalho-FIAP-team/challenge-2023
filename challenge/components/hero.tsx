@@ -14,7 +14,7 @@ const Hero = React.forwardRef<
         <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Onde as relações interpessoais se fortalecem e a <br/>consciência ambiental cresce!</p>
       </div>
       <div>
-        <img src="./images/download (4).jpg" />
+        <img src="/images/download (4).jpg" />
       </div>
     </div>
 ))

@@ -16,11 +16,18 @@ export interface Event {
   eventId: string;
 }
 
-export interface teamMember {
+export interface TeamMember {
   name: string;
   memberRm: string;
   description: string;
   image: string;
   github: string;
   instagram?: string;
+}
+
+export interface Testimonial {
+  name: string;
+  role: string;
+  company: string;
+  text: string;
 }

@@ -3,7 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-import { Toaster } from 'react-hot-toast' 
+import { Toaster } from 'react-hot-toast'
+
 
 const font = Poppins({ 
   subsets: ['latin'], 
