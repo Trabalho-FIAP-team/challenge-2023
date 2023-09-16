@@ -8,7 +8,7 @@ export interface Game {
 export interface Event {
   eventTitle: string;
   imagem: string;
-  imagem_post: string;
+  imagemEvent: string;
   eventAuthor: string;
   eventData: string;
   eventText: string;

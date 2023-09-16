@@ -1,9 +1,14 @@
 'use client'
 
+import { Avatar } from "@/components/ui/avatar";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import EventAvatar from "./event-avatar";
+import { Button } from "@/components/ui/button";
 
 interface EventCardProps {
+  eventData: string;
+  eventAuthor: string;
   imagem: string;
   eventTitle: string;
   eventText: string;
@@ -11,25 +16,33 @@ interface EventCardProps {
 }
 
 const EventCard = ({ event }: { event: EventCardProps }) => {
+
   return (
-    <div className="w-65 p-2 bg-muted-foreground/10 rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl ">
-        <img 
-          className="h-40 w-full object-cover rounded-xl" 
-          src={`https://picsum.photos/${event.imagem}`} 
-          alt="Imagem do Evento"
-        />
-        <div className="p-2">
-          <h2 className="font-bold text-lg mb-2 ">{event.eventTitle}</h2>
-          <p className="text-sm text-gray-600 dark:text-gray-100 truncate">{event.eventText}</p>
+    <div className="w-65 rounded-xl dark:bg-muted-foreground/10 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl ">
+      <div>
+          <img 
+            className="h-40 w-full object-cover rounded-t-xl border-b-4 border-lime-600" 
+            src={event.imagem} 
+            alt="Imagem do Evento"
+          />
         </div>
-        <div></div>
-        <div className="m-2 flex justify-end">
+        <div className="p-4">
+          <h2 className="font-bold text-lg truncate">{event.eventTitle}</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-100 line-clamp-2">{event.eventText}</p>
+          <div className="flex items-center mt-4 space-x-2">
+            <EventAvatar />
+            <h2 className="text-sm font-medium text-black dark:text-gray-100 "> {event.eventAuthor} | {event.eventData}</h2>
+          </div>
           <Link
-            className="text-white bg-lime-600 px-2 py-1 rounded-md hover:bg-lime-700 w-full flex justify-center"
-            href={`/events/${event.eventTitle}/${event.eventId}`}>
-             Saber mais <ArrowRight />
+            className="mt-7 flex justify-start"
+            href={`/events/${event.eventTitle}/${event.eventId}`}
+          >
+            <Button variant={"outline"}>
+              Saber mais <ArrowRight />
+            </Button>
           </Link>
         </div>
+
     </div>
   );
 };

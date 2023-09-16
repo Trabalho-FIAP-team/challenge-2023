@@ -8,7 +8,7 @@ import { MainNav } from "./main-nav"
 export const Navbar = () => {
 
   return (
-    <div className="w-11/12 flex justify-between items-center py-2 px-4 h-16">
+    <div className="w-10/12 flex justify-between items-center py-2 px-4 h-16">
       <div className="flex items-center">
         <Link href={'/'}>
           <div className={"md:block text-xl md:text-3xl font-bold text-primary"}>

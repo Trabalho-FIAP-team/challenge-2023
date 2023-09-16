@@ -28,7 +28,7 @@ const config: Config = {
         '4xl': '2rem',
       }
     },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
   }
 }
 

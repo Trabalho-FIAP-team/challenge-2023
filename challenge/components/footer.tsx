@@ -4,7 +4,7 @@ import Link from "next/link"
 import { UserButton } from "@clerk/nextjs"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { MainNav } from "./main-nav"
-import {FooterNav} from "@/components/footer-nav";
+import { FooterNav } from "@/components/footer-nav";
 
 export const Footer = () => {
 
@@ -15,7 +15,7 @@ export const Footer = () => {
                 <div>
 
                     <div className={"md:block text-xl md:text-3xl font-bold text-primary"}>
-                        <img src="./images/logo.png" className="w-24 h-8"/>
+                        <img src="./images/logo.png" className="w-24 h-8" />
                     </div>
 
 
