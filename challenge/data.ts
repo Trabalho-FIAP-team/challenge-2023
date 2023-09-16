@@ -272,7 +272,7 @@ export const team: teamMember[] = [
     github: 'hemelo',
   },
   {
-    name: "Eduardo Oliveira",
+    name: "Eduardo sei la",
     memberRm: "98778",
     description: "Responsável pelo desenvolvimento do Video Pitch",
     image: 'https://github.com/duardolv.png',

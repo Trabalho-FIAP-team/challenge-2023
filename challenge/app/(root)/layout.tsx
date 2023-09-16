@@ -18,7 +18,7 @@ const RootLayout = ({
       <div className="flex justify-center pt-8 border-b">
         <Navbar className="w-10/12 px-4"/>
       </div>
-      <main className="mx-auto w-9/12 flex-grow">
+      <main className="mx-auto w-10/12 flex-grow">
         {children}
       </main>
 

@@ -18,7 +18,7 @@ interface EventCardProps {
 const EventCard = ({ event }: { event: EventCardProps }) => {
 
   return (
-    <div className="w-65 rounded-xl dark:bg-muted-foreground/10 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl ">
+    <div className=" rounded-xl dark:bg-muted-foreground/10 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl ">
       <div>
           <img 
             className="h-40 w-full object-cover rounded-t-xl border-b-4 border-lime-600" 

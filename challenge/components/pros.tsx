@@ -1,7 +1,7 @@
 import * as React from "react";
 import {cn} from "@/lib/utils";
 import {Card, CardTitle, CardHeader, CardContent, CardDescription, CardIcon} from "@/components/ui/card";
-import {HeartHandshake, Leaf, Trees, Speech } from "lucide-react";
+import {Github, HeartHandshake, Leaf, Trees } from "lucide-react";
 
 const Pros =  React.forwardRef<
     HTMLDivElement,
@@ -27,7 +27,7 @@ const Pros =  React.forwardRef<
         {
             title: "Juntos Pelo Bem",
             description: "Através de projetos e iniciativas conjuntas, buscamos causar um impacto positivo na comunidade e no meio ambiente",
-            icon: <Speech  />
+            icon: <Github  />
         }
 
     ]
