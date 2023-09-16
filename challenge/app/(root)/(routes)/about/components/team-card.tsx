@@ -14,7 +14,7 @@ interface TeamCardProps {
 
 const TeamCard = ({ member }: { member: TeamCardProps }) => {
   return (
-    <div className="w-65 p-2 dark:bg-muted-foreground/10 rounded-xl drop-shadow-lg hover:shadow-2xl min-h-96 mb-10 transform transition-all hover:-translate-y-2 duration-300">
+    <div className="w-65 p-2 dark:bg-muted-foreground/10 rounded-xl drop-shadow-lg shadow-md hover:shadow-2xl min-h-96 mb-10 transform transition-all hover:-translate-y-2 duration-300">
       <div className="flex justify-center mt-3 mb-2">
         <img className="h-40 object-cover rounded-xl" src={member.image} alt="Imagem teamMember" />
       </div>
@@ -29,7 +29,7 @@ const TeamCard = ({ member }: { member: TeamCardProps }) => {
         </Link>
         <Link 
           href={member.instagram ? `https://instagram.com/${member.instagram}` : '#'}
-          className="min-w-[50%] h-12 py-1 rounded-md bg-gray-100 shadow-md hover:bg-gray-200 dark:bg-muted-foreground/20 flex justify-center items-center">
+          className="min-w-[50%] h-12 py-1 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-muted-foreground/20 flex justify-center items-center">
           <Instagram />
         </Link>
       </div>
