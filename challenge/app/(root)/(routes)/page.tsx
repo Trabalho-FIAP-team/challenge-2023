@@ -1,19 +1,13 @@
 import Hero from "@/components/hero";
+import Pros from "@/components/pros";
 
 export default function RootPage() {
   return (
     <main className="w-center">
-      <Hero />
-      <div className="flex-row text-center">
-        <p className="mt-20">teste</p>
-        <p className="mt-20">teste</p>
-        <p className="mt-20">teste</p>
-        <p className="mt-20">teste</p>
-        <p className="mt-20">teste</p>
-        <p className="mt-20">teste</p>
-        <p className="mt-20">teste</p>
-        <p className="mt-20">teste</p>
-      </div>
+      <Hero className="mt-20" />
+
+      <Pros className="mt-20" />
+
     </main>
   )
 }
