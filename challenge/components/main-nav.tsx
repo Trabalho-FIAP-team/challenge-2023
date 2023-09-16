@@ -37,11 +37,11 @@ export function MainNav() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-r to-lime-700 from-lime-500 p-6 no-underline outline-none focus:shadow-md"
                     href="/events"
                   >
-                    <Flame className="h-6 w-6"/>
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <Flame className="h-6 w-6 text-white"/>
+                    <div className="mb-2 mt-4 text-lg text-white font-medium">
                       Eventos em Alta!
                     </div>
-                    <p className="text-sm leading-tight dark:text-white">
+                    <p className="text-sm leading-tight text-white">
                       Eventos mais esperados pela galera!
                     </p>
                   </a>
