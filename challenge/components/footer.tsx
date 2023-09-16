@@ -8,6 +8,7 @@ import { FooterNav } from "@/components/footer-nav";
 import {cn} from "@/lib/utils";
 import * as React from "react";
 import {Facebook, Linkedin} from "lucide-react";
+import {Logo} from "@/components/logo";
 
 export const Footer = React.forwardRef<
     HTMLDivElement,
@@ -17,11 +18,7 @@ export const Footer = React.forwardRef<
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
-
-                <div className={"md:block text-xl md:text-3xl font-bold text-primary"}>
-                    <img src="./images/logo.png" className="w-24 h-8" />
-                </div>
-
+                <Logo />
 
                 <p className="mt-4 max-w-xs text-gray-500">
                     Buscamos criar um ambiente colaborativo e

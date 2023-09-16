@@ -15,9 +15,9 @@ const RootLayout = ({
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="flex justify-center pt-8 border-b">
+      <header className="flex justify-center pt-8 border-b">
         <Navbar className="w-10/12 px-4"/>
-      </div>
+      </header>
       <main className="mx-auto w-10/12 flex-grow">
         {children}
       </main>
