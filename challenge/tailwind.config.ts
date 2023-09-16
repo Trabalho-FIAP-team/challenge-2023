@@ -13,12 +13,12 @@ const config: Config = {
       lg: '976px',
       xl: '1440px',
     },
-    colors: {
-      'verde': '#89AA28',
-      'marrom-escuro': '#2F281E',
-      'marrom-claro': '#3B3322'
-    },
     extend: {
+      colors: {
+        verde: '#89AA28',
+        'marrom-escuro': '#2F281E',
+        'marrom-claro': '#3B3322'
+      },
       spacing: {
         '128': '32rem',
         '144': '36rem',

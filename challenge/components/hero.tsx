@@ -1,8 +1,11 @@
+import {cn} from "@/lib/utils";
+import * as React from "react";
 
-const Hero = () => {
-  return (
-
-    <div className="flex mt-20 justify-center items-center space-x-32">
+const Hero = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+    <div className={cn("flex justify-center items-center space-x-32", className)}>
       <div className="w-center">
         <div className="flex">
           <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-5xl">
@@ -14,7 +17,6 @@ const Hero = () => {
         <img src="./images/download (4).jpg" />
       </div>
     </div>
-  );
-}
+))
  
 export default Hero;
