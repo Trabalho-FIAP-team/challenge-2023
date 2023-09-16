@@ -45,7 +45,7 @@ const Testimonials = React.forwardRef<
                     <Card className="h-full">
                         <CardHeader>
                             <Avatar>
-                                <AvatarImage src="https://github.com/shadcn.png" />
+                                <AvatarImage src={testimonial.authorImage} />
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar>
                             <CardTitle>{testimonial.name}</CardTitle>

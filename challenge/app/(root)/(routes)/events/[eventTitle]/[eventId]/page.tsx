@@ -23,7 +23,7 @@ const EventIdPage = ({ params }: EventIdProps) => {
 
   function getImageByEventId(eventId: string): string | undefined {
     const event = events.find((e) => e.eventId === eventId);
-    return event ? event.imagemEvent : undefined;
+    return event ? event.eventImage : undefined;
   }
 
   function getTextByEventId(eventId: string): string | undefined {

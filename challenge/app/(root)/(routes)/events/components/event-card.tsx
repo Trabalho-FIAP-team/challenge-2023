@@ -1,19 +1,12 @@
 'use client'
 
-import { Avatar } from "@/components/ui/avatar";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import EventAvatar from "./event-avatar";
 import { Button } from "@/components/ui/button";
+import { Event } from "@/types";
 
-interface EventCardProps {
-  eventData: string;
-  eventAuthor: string;
-  imagem: string;
-  eventTitle: string;
-  eventText: string;
-  eventId: string;
-}
+type EventCardProps = Event;
 
 const EventCard = ({ event }: { event: EventCardProps }) => {
 
@@ -22,7 +15,7 @@ const EventCard = ({ event }: { event: EventCardProps }) => {
       <div>
           <img 
             className="h-40 w-full object-cover rounded-t-xl border-b-4 border-lime-600" 
-            src={event.imagem} 
+            src={event.thumb}
             alt="Imagem do Evento"
           />
         </div>

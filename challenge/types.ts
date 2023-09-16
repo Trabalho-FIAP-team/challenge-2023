@@ -8,8 +8,8 @@ export interface Game {
 
 export interface Event {
   eventTitle: string;
-  imagem: string;
-  imagemEvent: string;
+  thumb: string;
+  eventImage: string;
   eventAuthor: string;
   eventData: string;
   eventText: string;
@@ -30,4 +30,5 @@ export interface Testimonial {
   role: string;
   company: string;
   text: string;
+  authorImage: string;
 }

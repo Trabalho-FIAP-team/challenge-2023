@@ -4,8 +4,8 @@ import {Event, Game, TeamMember, Testimonial} from "@/types"
 
 export const events: Event[] = [
   {
-    imagem: "https://picsum.photos/id/247/348/185",
-    imagemEvent: "https://picsum.photos/id/247/1520/318",
+    thumb: "https://picsum.photos/id/247/348/185",
+    eventImage: "https://picsum.photos/id/247/1520/318",
     eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
@@ -13,8 +13,8 @@ export const events: Event[] = [
     eventId: '1'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagemEvent: "https://picsum.photos/id/201/1520/318",
+    thumb: "https://picsum.photos/id/201/348/185",
+    eventImage: "https://picsum.photos/id/201/1520/318",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Inc Institute",
     eventData: "2023-10-20",
@@ -22,8 +22,8 @@ export const events: Event[] = [
     eventId: '2'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagemEvent: "https://picsum.photos/id/202/1520/318",
+    thumb: "https://picsum.photos/id/202/348/185",
+    eventImage: "https://picsum.photos/id/202/1520/318",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -31,8 +31,8 @@ export const events: Event[] = [
     eventId: '3'
   },
   {
-    imagem: "https://picsum.photos/id/218/348/185",
-    imagemEvent: "https://picsum.photos/id/218/1520/318",
+    thumb: "https://picsum.photos/id/218/348/185",
+    eventImage: "https://picsum.photos/id/218/1520/318",
     eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
@@ -40,8 +40,8 @@ export const events: Event[] = [
     eventId: '4'
   },
   {
-    imagem: "https://picsum.photos/id/301/348/185",
-    imagemEvent: "https://picsum.photos/id/301/1520/318",
+    thumb: "https://picsum.photos/id/301/348/185",
+    eventImage: "https://picsum.photos/id/301/1520/318",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -49,8 +49,8 @@ export const events: Event[] = [
     eventId: '5'
   },
   {
-    imagem: "https://picsum.photos/id/211/348/185",
-    imagemEvent: "https://picsum.photos/id/211/1520/318",
+    thumb: "https://picsum.photos/id/211/348/185",
+    eventImage: "https://picsum.photos/id/211/1520/318",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Incs",
     eventData: "2024-02-15",
@@ -58,8 +58,8 @@ export const events: Event[] = [
     eventId: '6'
   },
   {
-    imagem: "https://picsum.photos/id/247/348/185",
-    imagemEvent: "https://picsum.photos/id/247/1520/318",
+    thumb: "https://picsum.photos/id/247/348/185",
+    eventImage: "https://picsum.photos/id/247/1520/318",
     eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
@@ -67,8 +67,8 @@ export const events: Event[] = [
     eventId: '7'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagemEvent: "https://picsum.photos/id/201/1520/318",
+    thumb: "https://picsum.photos/id/201/348/185",
+    eventImage: "https://picsum.photos/id/201/1520/318",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Inc Institute",
     eventData: "2023-10-20",
@@ -76,8 +76,8 @@ export const events: Event[] = [
     eventId: '8'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagemEvent: "https://picsum.photos/id/202/1520/318",
+    thumb: "https://picsum.photos/id/202/348/185",
+    eventImage: "https://picsum.photos/id/202/1520/318",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -85,8 +85,8 @@ export const events: Event[] = [
     eventId: '9'
   },
   {
-    imagem: "https://picsum.photos/id/218/348/185",
-    imagemEvent: "https://picsum.photos/id/218/1520/318",
+    thumb: "https://picsum.photos/id/218/348/185",
+    eventImage: "https://picsum.photos/id/218/1520/318",
     eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
@@ -94,8 +94,8 @@ export const events: Event[] = [
     eventId: '10'
   },
   {
-    imagem: "https://picsum.photos/id/301/348/185",
-    imagemEvent: "https://picsum.photos/id/301/1520/318",
+    thumb: "https://picsum.photos/id/301/348/185",
+    eventImage: "https://picsum.photos/id/301/1520/318",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Makt Institute",
     eventData: "2024-01-20",
@@ -103,8 +103,8 @@ export const events: Event[] = [
     eventId: '11'
   },
   {
-    imagem: "https://picsum.photos/id/211/348/185",
-    imagemEvent: "https://picsum.photos/id/211/1520/318",
+    thumb: "https://picsum.photos/id/211/348/185",
+    eventImage: "https://picsum.photos/id/211/1520/318",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Incs",
     eventData: "2024-02-15",
@@ -112,8 +112,8 @@ export const events: Event[] = [
     eventId: '12'
   },
   {
-    imagem: "https://picsum.photos/id/247/348/185",
-    imagemEvent: "https://picsum.photos/id/247/1520/318",
+    thumb: "https://picsum.photos/id/247/348/185",
+    eventImage: "https://picsum.photos/id/247/1520/318",
     eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
@@ -121,8 +121,8 @@ export const events: Event[] = [
     eventId: '13'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagemEvent: "https://picsum.photos/id/201/1520/318",
+    thumb: "https://picsum.photos/id/201/348/185",
+    eventImage: "https://picsum.photos/id/201/1520/318",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Inc Institute",
     eventData: "2023-10-20",
@@ -130,8 +130,8 @@ export const events: Event[] = [
     eventId: '14'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagemEvent: "https://picsum.photos/id/202/1520/318",
+    thumb: "https://picsum.photos/id/202/348/185",
+    eventImage: "https://picsum.photos/id/202/1520/318",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -139,8 +139,8 @@ export const events: Event[] = [
     eventId: '15'
   },
   {
-    imagem: "https://picsum.photos/id/218/348/185",
-    imagemEvent: "https://picsum.photos/id/218/1520/318",
+    thumb: "https://picsum.photos/id/218/348/185",
+    eventImage: "https://picsum.photos/id/218/1520/318",
     eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
@@ -148,8 +148,8 @@ export const events: Event[] = [
     eventId: '16'
   },
   {
-    imagem: "https://picsum.photos/id/301/348/185",
-    imagemEvent: "https://picsum.photos/id/301/1520/318",
+    thumb: "https://picsum.photos/id/301/348/185",
+    eventImage: "https://picsum.photos/id/301/1520/318",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -157,8 +157,8 @@ export const events: Event[] = [
     eventId: '17'
   },
   {
-    imagem: "https://picsum.photos/id/211/348/185",
-    imagemEvent: "https://picsum.photos/id/211/1520/318",
+    thumb: "https://picsum.photos/id/211/348/185",
+    eventImage: "https://picsum.photos/id/211/1520/318",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Incs",
     eventData: "2024-02-15",
@@ -166,8 +166,8 @@ export const events: Event[] = [
     eventId: '18'
   },
   {
-    imagem: "https://picsum.photos/id/247/348/185",
-    imagemEvent: "https://picsum.photos/id/247/1520/318",
+    thumb: "https://picsum.photos/id/247/348/185",
+    eventImage: "https://picsum.photos/id/247/1520/318",
     eventTitle: "Workshop de Eficiência Elétrica 2023",
     eventAuthor: "Schneider Electric",
     eventData: "2023-09-15",
@@ -175,8 +175,8 @@ export const events: Event[] = [
     eventId: '19'
   },
   {
-    imagem: "https://picsum.photos/id/201/348/185",
-    imagemEvent: "https://picsum.photos/id/201/1520/318",
+    thumb: "https://picsum.photos/id/201/348/185",
+    eventImage: "https://picsum.photos/id/201/1520/318",
     eventTitle: "Seminário de Inovação Tecnológica",
     eventAuthor: "Tech Inc Institute",
     eventData: "2023-10-20",
@@ -184,8 +184,8 @@ export const events: Event[] = [
     eventId: '20'
   },
   {
-    imagem: "https://picsum.photos/id/202/348/185",
-    imagemEvent: "https://picsum.photos/id/202/1520/318",
+    thumb: "https://picsum.photos/id/202/348/185",
+    eventImage: "https://picsum.photos/id/202/1520/318",
     eventTitle: "Conferência de Sustentabilidade",
     eventAuthor: "Green Earth Foundation",
     eventData: "2023-11-15",
@@ -193,8 +193,8 @@ export const events: Event[] = [
     eventId: '21'
   },
   {
-    imagem: "https://picsum.photos/id/218/348/185",
-    imagemEvent: "https://picsum.photos/id/218/1520/318",
+    thumb: "https://picsum.photos/id/218/348/185",
+    eventImage: "https://picsum.photos/id/218/1520/318",
     eventTitle: "Workshop de desenvolvimento de fodase",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
@@ -202,8 +202,8 @@ export const events: Event[] = [
     eventId: '22'
   },
   {
-    imagem: "https://picsum.photos/id/301/348/185",
-    imagemEvent: "https://picsum.photos/id/301/1520/318",
+    thumb: "https://picsum.photos/id/301/348/185",
+    eventImage: "https://picsum.photos/id/301/1520/318",
     eventTitle: "Conferência de Marketing Digital",
     eventAuthor: "Digital Marketing Institute",
     eventData: "2024-01-20",
@@ -211,8 +211,8 @@ export const events: Event[] = [
     eventId: '23'
   },
   {
-    imagem: "https://picsum.photos/id/211/348/185",
-    imagemEvent: "https://picsum.photos/id/211/1520/318",
+    thumb: "https://picsum.photos/id/211/348/185",
+    eventImage: "https://picsum.photos/id/211/1520/318",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Incs",
     eventData: "2024-02-15",
@@ -302,30 +302,35 @@ export const testimonials: Testimonial[] = [
     name: "Jane Doe",
     role: "Diretora Executiva",
     company: "GreenSolutions",
-    text: "Nossa parceria com a Schneider Electric trouxe inovação e sustentabilidade para nosso negócio, transformando nossa visão em realidade."
+    text: "Nossa parceria com a Schneider Electric trouxe inovação e sustentabilidade para nosso negócio, transformando nossa visão em realidade.",
+    authorImage: "/images/testimonials/jane-joe.jpg"
   },
   {
     name: "André Souza",
     role: "Especialista em Energia Renovável",
     company: "Schneider Electric",
-    text: "Minha carreira na Schneider Electric me permitiu ser parte ativa na transformação do setor energético. Estamos moldando um futuro sustentável e sou grato por fazer parte desse movimento."
+    text: "Minha carreira na Schneider Electric me permitiu ser parte ativa na transformação do setor energético. Estamos moldando um futuro sustentável e sou grato por fazer parte desse movimento.",
+    authorImage: "/images/testimonials/andre-souza.jpg"
   },
   {
     name: "Mark Smith",
     role: "Fundador",
     company: "EcoTech Innovations",
-    text: "A Schneider Electric provou ser uma parceira fundamental em nossa jornada rumo à sustentabilidade, fornecendo soluções inteligentes e comprometimento com o meio ambiente."
+    text: "A Schneider Electric provou ser uma parceira fundamental em nossa jornada rumo à sustentabilidade, fornecendo soluções inteligentes e comprometimento com o meio ambiente.",
+    authorImage: "/images/testimonials/mark-smith.jpg"
   },
   {
     name: "Sarah Jones",
     role: "Gerente de Operações",
     company: "EarthCare",
-    text: "A Schneider Electric está à frente quando se trata de criar soluções inovadoras para um futuro sustentável. É uma parceria que valorizamos muito."
+    text: "A Schneider Electric está à frente quando se trata de criar soluções inovadoras para um futuro sustentável. É uma parceria que valorizamos muito.",
+    authorImage: "/images/testimonials/sarah-jones.jpg"
   },
   {
     name: "Maria Silva",
     role: "Engenheira de Sustentabilidade",
     company: "Schneider Electric",
-    text: "Na Schneider Electric, encontrei um ambiente que valoriza a inovação e o compromisso com um planeta mais verde. Estou orgulhosa de fazer parte dessa jornada rumo à sustentabilidade."
+    text: "Na Schneider Electric, encontrei um ambiente que valoriza a inovação e o compromisso com um planeta mais verde. Estou orgulhosa de fazer parte dessa jornada rumo à sustentabilidade.",
+    authorImage: "/images/testimonials/maria-silva.jpg"
   }
 ]
