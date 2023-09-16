@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y, Autoplay, History  } from 'swiper/modules';
 
 import { testimonials } from "@/data";
+import { getNameInitials } from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
@@ -46,7 +47,7 @@ const Testimonials = React.forwardRef<
                         <CardHeader>
                             <Avatar>
                                 <AvatarImage src={testimonial.authorImage} />
-                                <AvatarFallback>CN</AvatarFallback>
+                                <AvatarFallback>{getNameInitials(testimonial.name)}</AvatarFallback>
                             </Avatar>
                             <CardTitle>{testimonial.name}</CardTitle>
                             <CardDescription className="text-lime-600 font-semibold">{testimonial.role}, {testimonial.company}</CardDescription>
