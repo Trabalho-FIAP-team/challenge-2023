@@ -28,7 +28,7 @@ const TeamCard = ({ member }: { member: TeamCardProps }) => {
           <Github />
         </Link>
         <Link 
-          href={member.instagram ? `https://instagram.com/${member.instagram}` : '#'}
+          href={member.instagram ? `https://instagram.com/${member.instagram}` : '#'} target="_blank"
           className="min-w-[50%] h-12 py-1 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-muted-foreground/20 flex justify-center items-center">
           <Instagram />
         </Link>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -5,8 +6,7 @@ import {cn} from "@/lib/utils";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y, Autoplay, History  } from 'swiper/modules';
 
-import { testimonials } from "@/data";
-import { getNameInitials } from "@/lib/utils";
+import { events } from "@/data";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
@@ -15,21 +15,22 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {SectionHeader, SectionSubtitle, SectionTitle} from "@/components/ui/section";
+import EventCard from "@/app/(root)/(routes)/events/components/event-card";
 
 const autoplayOptions = {
     delay:5000,
     disableOnInteraction:true
 };
 
-const Testimonials = React.forwardRef<
+const Events = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
     <section className={cn("", className)}>
 
         <SectionHeader variant={"center"}>
-            <SectionTitle>Depoimentos</SectionTitle>
-            <SectionSubtitle>A Ideologia que Impulsiona Nossa Empresa</SectionSubtitle>
+            <SectionTitle>Eventos em Destaque!</SectionTitle>
+            <SectionSubtitle>O que esperar nos próximos meses</SectionSubtitle>
         </SectionHeader>
 
         <Swiper  spaceBetween={50}
@@ -41,25 +42,13 @@ const Testimonials = React.forwardRef<
                 /* onSlideChange={() => console.log('slide change')}
                  onSwiper={(swiper) => console.log(swiper)}*/>
 
-            { testimonials.map((testimonial, index) => (
-                <SwiperSlide className="!h-auto" key={index}>
-                    <Card className="h-full">
-                        <CardHeader>
-                            <Avatar>
-                                <AvatarImage src={testimonial.authorImage} />
-                                <AvatarFallback>{getNameInitials(testimonial.name)}</AvatarFallback>
-                            </Avatar>
-                            <CardTitle>{testimonial.name}</CardTitle>
-                            <CardDescription className="text-lime-600 font-semibold">{testimonial.role}, {testimonial.company}</CardDescription>
-                        </CardHeader>
-                        <CardContent className="text-gray-500 italic">
-                            "{testimonial.text}"
-                        </CardContent>
-                    </Card>
+            {events.slice(0, 6).map((event, index) => (
+                <SwiperSlide className="!h-auto mt-6" key={index}>
+                  <EventCard event={event} />
                 </SwiperSlide>
             ))}
         </Swiper>
     </section>
 ))
 
-export default Testimonials;
+export default Events;

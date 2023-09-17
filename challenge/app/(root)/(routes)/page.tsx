@@ -3,6 +3,7 @@ import Pros from "@/components/pros";
 import LearnWithUs from "@/components/learn-with-us";
 import Testimonials from "@/components/testimonials";
 import AboutUs from "@/components/about-us";
+import Events from "@/components/events";
 
 export default function RootPage() {
   return (
@@ -12,6 +13,7 @@ export default function RootPage() {
       <LearnWithUs className="py-6" />
       <Testimonials  />
       <AboutUs />
+      <Events />
     </main>
   )
 }

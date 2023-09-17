@@ -226,32 +226,38 @@ export const games:Game[] = [
   {
     gameTitle: "Topeira Sustentável",
     description: "Acerte as topeiras que contém alimentos saudáveis",
-    gameId: "bb660205fb904ff0b6c6bddd924d986c?themeId=22&templateId=45&fontStackId=0"
+    gameId: "bb660205fb904ff0b6c6bddd924d986c?themeId=22&templateId=45&fontStackId=0",
+    emote: "🦫"
   },
   {
     gameTitle: "Jogo da Memória",
     description: "sei la sei la sei la sei la sei la sei la sei la sei la sei la sei la!",
-    gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0"
+    gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0",
+    emote: '🧩'
   },
   {
     gameTitle: "PacMan",
     description: "Teste seus conhecimentos de sustentabilidade",
-    gameId: "3cf4624e7efc477db2b209377e35c181?themeId=23&templateId=49&fontStackId=0"
+    gameId: "3cf4624e7efc477db2b209377e35c181?themeId=23&templateId=49&fontStackId=0",
+    emote: '🕹️'
   },
   {
     gameTitle: "Quiz dos 5R's",
     description: "Teste seus conhecimentos de sustentabilidade",
-    gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0"
+    gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0",
+    emote: '❓'
   },
   {
     gameTitle: "PacMan",
     description: "Teste seus conhecimentos de sustentabilidade",
-    gameId: "3cf4624e7efc477db2b209377e35c181?themeId=23&templateId=49&fontStackId=0"
+    gameId: "3cf4624e7efc477db2b209377e35c181?themeId=23&templateId=49&fontStackId=0",
+    emote: '❓'
   },
   {
     gameTitle: "Quiz dos 5R's",
     description: "Teste seus conhecimentos de sustentabilidade",
-    gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0"
+    gameId: "96f8ff22a88d415a9ecf2796bd0212a2?themeId=49&templateId=3&fontStackId=0",
+    emote: '❓'
   },
 ]
 
@@ -262,7 +268,7 @@ export const team: TeamMember[] = [
     description: "Engenheiro Frontend e Líder de Projeto",
     image: 'https://github.com/RafaelRMJesus.png',
     github: 'RafaelRMJesus',
-    instagram: '#'
+    instagram: 'rafael.rocha.mj'
   },
   {
     name: "Henrique Melo",
@@ -288,7 +294,7 @@ export const team: TeamMember[] = [
     github: 'SmileySZ',
   },
   {
-    name: "Rafael Cordeiro",
+    name: "Rafael Cordeir",
     memberRm: "97668",
     description: "Engenheiro Frontend e Gestor de Mídia Social",
     image: 'https://github.com/fodase.png',
@@ -311,6 +317,27 @@ export const testimonials: Testimonial[] = [
     company: "Schneider Electric",
     text: "Minha carreira na Schneider Electric me permitiu ser parte ativa na transformação do setor energético. Estamos moldando um futuro sustentável e sou grato por fazer parte desse movimento.",
     authorImage: "/images/testimonials/andre-souza.jpg"
+  },
+  {
+    name: "Mark Smith",
+    role: "Fundador",
+    company: "EcoTech Innovations",
+    text: "A Schneider Electric provou ser uma parceira fundamental em nossa jornada rumo à sustentabilidade, fornecendo soluções inteligentes e comprometimento com o meio ambiente.",
+    authorImage: "/images/testimonials/mark-smith.jpg"
+  },
+  {
+    name: "Sarah Jones",
+    role: "Gerente de Operações",
+    company: "EarthCare",
+    text: "A Schneider Electric está à frente quando se trata de criar soluções inovadoras para um futuro sustentável. É uma parceria que valorizamos muito.",
+    authorImage: "/images/testimonials/sarah-jones.jpg"
+  },
+  {
+    name: "Maria Silva",
+    role: "Engenheira de Sustentabilidade",
+    company: "Schneider Electric",
+    text: "Na Schneider Electric, encontrei um ambiente que valoriza a inovação e o compromisso com um planeta mais verde. Estou orgulhosa de fazer parte dessa jornada rumo à sustentabilidade.",
+    authorImage: "/images/testimonials/maria-silva.jpg"
   },
   {
     name: "Mark Smith",

@@ -34,7 +34,7 @@ const EventIdPage = ({ params }: EventIdProps) => {
   return (
     <div>
 
-      <div className="flex justify-center items-center mt-20">
+      <div className="flex justify-center items-center">
         <img
           className="rounded-xl "
           src={getImageByEventId(params.eventId)}

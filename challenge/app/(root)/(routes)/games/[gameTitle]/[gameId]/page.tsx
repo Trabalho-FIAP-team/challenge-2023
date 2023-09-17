@@ -1,3 +1,5 @@
+import { games } from "@/data";
+
 
 interface GameIdProps {
   params: {
@@ -7,13 +9,13 @@ interface GameIdProps {
 }
 
 function decodeString(inputString: string) {
-    try {
-        const decodedString = decodeURIComponent(inputString);
-        return decodedString;
-    } catch (error) {
-        console.error(`Erro ao decodificar a string: ${error}`);
-        return null;
-    }
+  try {
+    const decodedString = decodeURIComponent(inputString);
+    return decodedString;
+  } catch (error) {
+    console.error(`Erro ao decodificar a string: ${error}`);
+    return null;
+  }
 }
 
 const GameIdPage = ({
@@ -22,12 +24,12 @@ const GameIdPage = ({
 
   return (
     <div>
-      <h1 className="mt-20 mb-6 text-3xl font-extrabold text-gray-900 flex justify-center dark:text-white md:text-5xl lg:text-5xl" >{decodeString(params.gameTitle)}</h1>
+      <h1 className="mb-6 text-3xl font-extrabold text-gray-900 flex justify-start dark:text-white md:text-5xl lg:text-5xl border-b-2" >{`${decodeString(params.gameTitle)}`}</h1>
       <div className="flex justify-center mt-12 mb-2">
-        <iframe 
-          src={`https://wordwall.net/pt/embed/${params.gameId}` }
-          width="720" 
-          height="405"
+        <iframe
+          src={`https://wordwall.net/pt/embed/${params.gameId}`}
+          width="1600"
+          height="600"
           className="rounded-md"
           allowFullScreen
         ></iframe>
@@ -35,5 +37,5 @@ const GameIdPage = ({
     </div>
   );
 }
- 
+
 export default GameIdPage;

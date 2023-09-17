@@ -51,7 +51,7 @@ const CardIcon = React.forwardRef<
     <h3
         ref={ref}
         className={cn(
-            "w-20 h-20 flex justify-center items-center rounded-[10px] border-2 border-solid border-verde bg-verde",
+            "w-20 h-16 flex justify-center items-center rounded-[10px] bg-verde",
             className
         )}
         {...props}

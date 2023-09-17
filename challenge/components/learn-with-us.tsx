@@ -34,7 +34,7 @@ const LearnWithUs = React.forwardRef<
                 <ul className="space-y-6">
                     {data.map((item, index) => (
                         <li className="flex items-center flex-row gap-2" key={index}>
-                            <BadgeCheck color="green" />
+                            <BadgeCheck color="#7AAC00" />
                             {item}
                         </li>
                     ))}
