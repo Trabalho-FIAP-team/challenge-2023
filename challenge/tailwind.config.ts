@@ -15,7 +15,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        verde: '#89AA28',
+        'verde': '#89AA28',
         'verde-normal': "#7AAC00",
         'marrom-escuro': '#2F281E',
         'marrom-claro': '#3B3322'

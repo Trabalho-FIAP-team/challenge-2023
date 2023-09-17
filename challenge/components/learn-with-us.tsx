@@ -1,8 +1,8 @@
 import * as React from "react";
-import {cn} from "@/lib/utils";
-import {BadgeCheck} from "lucide-react";
-import {Logo} from "@/components/logo";
-import {SectionTitle} from "@/components/ui/section";
+import { cn } from "@/lib/utils";
+import { BadgeCheck } from "lucide-react";
+import { Logo } from "@/components/logo";
+import { SectionTitle } from "@/components/ui/section";
 
 const LearnWithUs = React.forwardRef<
     HTMLDivElement,
@@ -20,12 +20,9 @@ const LearnWithUs = React.forwardRef<
 
     return (
         <section className={cn("flex border-b-2 border-t-2 flex-col md:flex-row items-center gap-8 md:gap-20 xl:gap-36", className)}>
-            <div className="w-full md:w-6/12 xl:pl-36">
-                <img src={"/images/learn-with-us.svg"} className="w-full" alt="Learn with us" />
-            </div>
-            <div className="md:w-6/12">
+            <div className="md:w-6/12  lg:ml-64">
                 <div className="flex items-center gap-2 mb-4">
-                    <span className="text-gray-600 dark:text-gray-400   ">Sobre</span>
+                    <span className="text-gray-600 dark:text-gray-400">Sobre</span>
                     <Logo />
                 </div>
 
@@ -40,6 +37,11 @@ const LearnWithUs = React.forwardRef<
                     ))}
                 </ul>
             </div>
+            <div className="w-full md:w-6/12 flex justify-center itms-center mb-16 mt-12 mr-64">
+                <img src={"/images/blob-haikei (3).png"} className="w-5/12 absolute z-[-40]" alt="Learn with us" />
+                <img src={"/images/3d2.png"} className="w-72" alt="Learn with us" />
+            </div>
+
         </section>
     )
 })
