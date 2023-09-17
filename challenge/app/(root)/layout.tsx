@@ -15,6 +15,7 @@ const RootLayout = ({
 
   return (
     <div className="min-h-screen flex flex-col">
+      <img src={"/images/bg.png"} className="w-full absolute z-[-50]" alt="Learn with us" />
       <header className="flex justify-center pt-8 border-b">
         <Navbar className="w-10/12 px-4"/>
       </header>

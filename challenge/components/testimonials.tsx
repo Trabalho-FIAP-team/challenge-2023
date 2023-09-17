@@ -43,7 +43,7 @@ const Testimonials = React.forwardRef<
 
             { testimonials.map((testimonial, index) => (
                 <SwiperSlide className="!h-auto" key={index}>
-                    <Card className="h-full">
+                    <Card className="h-full bg-muted-foreground/10">
                         <CardHeader>
                             <Avatar>
                                 <AvatarImage src={testimonial.authorImage} />
@@ -52,7 +52,7 @@ const Testimonials = React.forwardRef<
                             <CardTitle>{testimonial.name}</CardTitle>
                             <CardDescription className="text-lime-600 font-semibold">{testimonial.role}, {testimonial.company}</CardDescription>
                         </CardHeader>
-                        <CardContent className="text-gray-500 italic">
+                        <CardContent className="text-gray-500 dark:text-gray-400 italic">
                             "{testimonial.text}"
                         </CardContent>
                     </Card>

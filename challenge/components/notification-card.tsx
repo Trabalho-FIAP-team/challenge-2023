@@ -1,3 +1,5 @@
+'use client'
+
 import { BellRing, Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -11,6 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
+import toast from "react-hot-toast"
 
 type CardProps = React.ComponentProps<typeof Card>
 
@@ -48,7 +51,10 @@ export function NotificationCard({ className, ...props }: CardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full bg-lime-400 hover:bg-lime-500">
+        <Button 
+          className="w-full bg-lime-400 hover:bg-lime-500"
+          onClick={() => {toast.success('Você vai receber notificações sobre esse evento!')}}
+        >
           Receber Notificações
         </Button>
       </CardFooter>

@@ -57,7 +57,7 @@ const SectionSubtitle = React.forwardRef<
     <h2
         ref={ref}
         className={cn(
-            "text-xl text-gray-600 leading-none tracking-tight",
+            "text-xl text-gray-600 dark:text-gray-400 leading-none tracking-tight",
             className
         )}
         {...props}
