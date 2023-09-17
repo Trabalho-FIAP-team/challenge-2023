@@ -259,7 +259,7 @@ export const team: TeamMember[] = [
   {
     name: "Rafael Jesus",
     memberRm: "98296",
-    description: "Responsável pelo desenvolvimento do site",
+    description: "Engenheiro Frontend e Líder de Projeto",
     image: 'https://github.com/RafaelRMJesus.png',
     github: 'RafaelRMJesus',
     instagram: '#'
@@ -267,7 +267,7 @@ export const team: TeamMember[] = [
   {
     name: "Henrique Melo",
     memberRm: "99397",
-    description: "Responsável pelo desenvolvimento do site",
+    description: "Engenheiro Frontend e Gestor de Projeto",
     image: 'https://github.com/hemelo.png',
     github: 'hemelo',
     instagram: 'hmelo2509'
@@ -275,7 +275,7 @@ export const team: TeamMember[] = [
   {
     name: "Eduardo sei la",
     memberRm: "98778",
-    description: "Responsável pelo desenvolvimento do Video Pitch",
+    description: "Engenheiro Frontend e Dev. Advocate",
     image: 'https://github.com/duardolv.png',
     github: 'duardolv',
     instagram: 'duardolv'
@@ -283,14 +283,14 @@ export const team: TeamMember[] = [
   {
     name: "Vinícius Britto",
     memberRm: "99655",
-    description: "Responsável pelo desenvolvimento do Video Pitch",
+    description: "Engenheiro Frontend e Gestor de Comunidades",
     image: 'https://github.com/SmileySZ.png',
     github: 'SmileySZ',
   },
   {
     name: "Rafael Cordeiro",
     memberRm: "97668",
-    description: "Responsável pelo desenvolvimento do Video Pitch",
+    description: "Engenheiro Frontend e Gestor de Mídia Social",
     image: 'https://github.com/fodase.png',
     github: 'rafaeldossantos04',
     instagram: 'rafaeldossantos04'

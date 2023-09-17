@@ -6,7 +6,7 @@ import AboutUs from "@/components/about-us";
 
 export default function RootPage() {
   return (
-    <main className="w-center mt-20 space-y-20">
+    <main className="w-center space-y-20">
       <Hero />
       <Pros />
       <LearnWithUs className="py-6" />
