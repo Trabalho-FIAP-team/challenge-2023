@@ -31,10 +31,10 @@ export const events: Event[] = [
   {
     thumb: "https://picsum.photos/id/218/348/185",
     eventImage: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de desenvolvimento de fodase",
+    eventTitle: "Workshop de desenvolvimento",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '4'
   },
   {
@@ -85,10 +85,10 @@ export const events: Event[] = [
   {
     thumb: "https://picsum.photos/id/218/348/185",
     eventImage: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de desenvolvimento de fodase",
+    eventTitle: "Workshop de desenvolvimento",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '10'
   },
   {
@@ -139,10 +139,10 @@ export const events: Event[] = [
   {
     thumb: "https://picsum.photos/id/218/348/185",
     eventImage: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de desenvolvimento de fodase",
+    eventTitle: "Workshop de desenvolvimento",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '16'
   },
   {
@@ -193,10 +193,10 @@ export const events: Event[] = [
   {
     thumb: "https://picsum.photos/id/218/348/185",
     eventImage: "https://picsum.photos/id/218/1520/318",
-    eventTitle: "Workshop de desenvolvimento de fodase",
+    eventTitle: "Workshop de desenvolvimento",
     eventAuthor: "Code Masters",
     eventData: "2023-12-10",
-    eventText: "Participe do nosso Workshop de desenvolvimento de fodase e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
+    eventText: "Participe do nosso Workshop de desenvolvimento e aprimore suas habilidades em programação e desenvolvimento de software. Nossos instrutores experientes o guiarão através de projetos práticos e desafios emocionantes.",
     eventId: '22'
   },
   {

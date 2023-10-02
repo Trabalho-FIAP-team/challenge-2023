@@ -38,6 +38,26 @@ const Testimonials = React.forwardRef<
                  autoplay={autoplayOptions}
                  modules={[Autoplay, Pagination, Scrollbar, A11y, History ]}
                  className="!pb-12"
+                 breakpoints={
+                    {
+                        480: {
+                            slidesPerView: 1,
+                            spaceBetween: 50
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 50
+                        },
+                        976: {
+                            slidesPerView: 3,
+                            spaceBetween: 50
+                        },
+                        1440: {
+                            slidesPerView: 4,
+                            spaceBetween: 50
+                        }
+                    }
+                 }
                 /* onSlideChange={() => console.log('slide change')}
                  onSwiper={(swiper) => console.log(swiper)}*/>
 
