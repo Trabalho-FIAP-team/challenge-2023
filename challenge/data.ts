@@ -1,6 +1,4 @@
-
 import {Event, Game, TeamMember, Testimonial} from "@/types"
-
 
 export const events: Event[] = [
   {
@@ -279,7 +277,7 @@ export const team: TeamMember[] = [
     instagram: 'hmelo2509'
   },
   {
-    name: "Eduardo sei la",
+    name: "Eduardo Guimarães",
     memberRm: "98778",
     description: "Engenheiro Frontend e Dev. Advocate",
     image: 'https://github.com/duardolv.png',
@@ -294,7 +292,7 @@ export const team: TeamMember[] = [
     github: 'SmileySZ',
   },
   {
-    name: "Rafael Cordeir",
+    name: "Rafael Cordeiro",
     memberRm: "97668",
     description: "Engenheiro Frontend e Gestor de Mídia Social",
     image: 'https://github.com/fodase.png',

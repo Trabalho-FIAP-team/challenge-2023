@@ -1,7 +1,7 @@
 
 const VideoPage = () => {
   return (
-    <div className="flex justify-center items-center mt-20 mb-12">
+    <div className="flex justify-center items-center mb-12">
       <iframe
         className="rounded-lg"
         width="1080"
