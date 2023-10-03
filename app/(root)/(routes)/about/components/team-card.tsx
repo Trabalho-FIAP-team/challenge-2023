@@ -2,6 +2,7 @@
 
 import { Github, Instagram } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image"
 
 interface TeamCardProps {
   name: string;
@@ -16,7 +17,7 @@ const TeamCard = ({ member }: { member: TeamCardProps }) => {
   return (
     <div className="w-65 p-2 dark:bg-muted-foreground/10 rounded-xl drop-shadow-lg shadow-md hover:shadow-2xl min-h-96 mb-10 transform transition-all hover:-translate-y-2 duration-300">
       <div className="flex justify-center mt-3 mb-2">
-        <img className="h-40 object-cover rounded-xl" src={member.image} alt="Imagem teamMember" />
+        <Image className="object-cover rounded-xl" src={member.image} width={160} height={160} alt="Imagem teamMember" />
       </div>
       <div className="p-2 text-center">
         <h2 className="font-bold text-lg mb-2">{member.name} | RM: {member.memberRm}</h2>

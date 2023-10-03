@@ -5,6 +5,7 @@ import Link from "next/link";
 import EventAvatar from "./event-avatar";
 import { Button } from "@/components/ui/button";
 import { Event } from "@/types";
+import Image from "next/image";
 
 type EventCardProps = Event;
 
@@ -13,10 +14,12 @@ const EventCard = ({ event }: { event: EventCardProps }) => {
   return (
     <div className="rounded-xl border bg-muted-foreground/10 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl ">
       <div>
-          <img 
+          <Image 
             className="h-40 w-full object-cover rounded-t-xl border-b-4 border-lime-600" 
             src={event.thumb}
             alt="Imagem do Evento"
+            width={300}
+            height={200}
           />
         </div>
         <div className="p-4">

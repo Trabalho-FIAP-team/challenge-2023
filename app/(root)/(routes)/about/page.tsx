@@ -49,12 +49,7 @@ const AboutPage = () => {
 						</div>
 					))}
 				</div>
-
-				<Button variant={"default"}>
-					Trabalhe conosco <ArrowRight className="ml-2" />
-				</Button>
 			</article>
-
 			<article className="space-y-6">
 				<h2 className="justify-start text-2xl font-bold text-gray-900 flex dark:text-white md:text-3xl lg:text-3xl border-b-2">
 					Nossos escritórios

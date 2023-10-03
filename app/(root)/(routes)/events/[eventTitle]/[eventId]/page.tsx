@@ -1,6 +1,6 @@
-
 import { events } from "@/data"
-import { NotificationCard } from "@/components/notification-card";
+import { NotificationCard } from "@/app/(root)/(routes)/events/[eventTitle]/[eventId]/components/notification-card";
+import Image from "next/image";
 
 interface EventIdProps {
   params: {
@@ -31,14 +31,17 @@ const EventIdPage = ({ params }: EventIdProps) => {
     return event ? event.eventText : undefined;
   }
 
+  let image: string = getImageByEventId(params.eventId) || '';
+
   return (
     <div>
-
       <div className="flex justify-center items-center">
-        <img
-          className="rounded-xl "
-          src={getImageByEventId(params.eventId)}
+        <Image
+          className="rounded-xl"
+          src={image}
           alt='Imagem EventId'
+          width={1520}
+          height={600}
         />
       </div>
 
@@ -50,11 +53,13 @@ const EventIdPage = ({ params }: EventIdProps) => {
           <p className="text-md text-gray-600 dark:text-gray-100 ml-8 mr-10 text-left">
             {getTextByEventId(params.eventId)}
             {getTextByEventId(params.eventId)}
-            {getTextByEventId(params.eventId)}
           </p>
         </div>
         <div className="flex justify-center">
-          <NotificationCard />
+          <NotificationCard 
+            eventTitle={params.eventTitle}
+            eventImage={image}
+          />
         </div>
       </div>
 

@@ -11,19 +11,18 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Switch } from "./ui/switch"
 import toast from "react-hot-toast"
-import { useParams } from "next/navigation"
-import { useState } from "react"
-import { useUser } from "@clerk/nextjs"
+import SendEventEmailButton from "@/lib/send-email-button"
 
-export function NotificationCard() {
+interface NotificatiionCardProps {
+  eventTitle: string;
+  eventImage: string;
+}
 
-  const params = useParams();
-  const [loading, setLoading] = useState(false)
-  const user = useUser() 
-  const userEmail = user?.user?.primaryEmailAddress?.emailAddress
-
+export function NotificationCard({
+  eventTitle,
+  eventImage
+}: NotificatiionCardProps) {
   return (
     <Card>
       <CardHeader>
@@ -43,18 +42,7 @@ export function NotificationCard() {
         </div>
       </CardContent>
       <CardFooter>
-        <div className="flex items-center space-x-2">
-          <Switch id="atualizacao" />
-          <Label htmlFor="airplane-mode">Quer Rebeber Atualizações?</Label>
-        </div>
-        <Button 
-          className="p-6 bg-lime-500 hover:bg-lime-600"
-          onClick={() => {
-            console.log(userEmail)
-            toast.success('email enviado com sucesso!')
-          }}
-          >Quero Participar!
-        </Button>
+        <SendEventEmailButton eventTitle={eventTitle} eventImage={eventImage}/>
       </CardFooter>
     </Card>
   )
