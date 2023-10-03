@@ -7,7 +7,6 @@ import { MainNav } from "./main-nav"
 import {cn} from "@/lib/utils";
 import * as React from "react";
 import {Logo} from "@/components/logo";
-import { Separator } from "./ui/separator"
 
 export const Navbar = React.forwardRef<
     HTMLDivElement,

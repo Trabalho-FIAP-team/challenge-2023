@@ -1,8 +1,5 @@
 'use client'
 
-import { BellRing, Check } from "lucide-react"
-
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -12,50 +9,51 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Switch } from "@/components/ui/switch"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Switch } from "./ui/switch"
 import toast from "react-hot-toast"
+import { useParams } from "next/navigation"
+import { useState } from "react"
+import { useUser } from "@clerk/nextjs"
 
-type CardProps = React.ComponentProps<typeof Card>
+export function NotificationCard() {
 
-export function NotificationCard({ className, ...props }: CardProps) {
+  const params = useParams();
+  const [loading, setLoading] = useState(false)
+  const user = useUser() 
+  const userEmail = user?.user?.primaryEmailAddress?.emailAddress
+
   return (
-    <Card className={cn("w-[380px]", className)} {...props}>
+    <Card>
       <CardHeader>
-        <CardTitle>Notificações</CardTitle>
-        <CardDescription>Quer receber notificações sobre o evento?</CardDescription>
+        <CardTitle>Quer participar desse evento?</CardTitle>
+        <CardDescription>
+          Complete o formulário abaixo com os seus dados e embarque nessa experiência.
+        </CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4">
-        <div className=" flex items-center space-x-4 rounded-md border p-4">
-          <BellRing />
-          <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-              Enviar Notificações
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Desejo receber notificações
-            </p>
-          </div>
-          <Switch />
+      <CardContent className="space-y-2">
+        <div className="space-y-1">
+          <Label htmlFor="nome">Nome</Label>
+          <Input id="nome" placeholder="Nome completo" />
         </div>
-        <div>
-            <div
-              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-            >
-              <span className="flex h-2 w-2 translate-y-1 rounded-full bg-lime-400" />
-              <div className="space-y-1">
-                <p className="text-sm ">
-                  Você pode receber notificações fora do horário de trabalho!
-                </p>
-              </div>
-            </div>
+        <div className="space-y-1">
+          <Label htmlFor="email">Email</Label>
+          <Input id="email" placeholder="Seu melhor Email" />
         </div>
       </CardContent>
       <CardFooter>
+        <div className="flex items-center space-x-2">
+          <Switch id="atualizacao" />
+          <Label htmlFor="airplane-mode">Quer Rebeber Atualizações?</Label>
+        </div>
         <Button 
-          className="w-full bg-lime-400 hover:bg-lime-500"
-          onClick={() => {toast.success('Você vai receber notificações sobre esse evento!')}}
-        >
-          Receber Notificações
+          className="p-6 bg-lime-500 hover:bg-lime-600"
+          onClick={() => {
+            console.log(userEmail)
+            toast.success('email enviado com sucesso!')
+          }}
+          >Quero Participar!
         </Button>
       </CardFooter>
     </Card>

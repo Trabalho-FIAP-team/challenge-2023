@@ -11,3 +11,4 @@ export function getNameInitials(name: string) {
   const lastNameInitial = nameArray[1].charAt(0).toUpperCase();
   return `${firstNameInitial}${lastNameInitial}`;
 }
+

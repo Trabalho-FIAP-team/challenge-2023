@@ -16,7 +16,7 @@ import { events, games } from "@/data"
 
 export function MainNav() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>

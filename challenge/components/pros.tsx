@@ -1,9 +1,9 @@
 import * as React from "react";
-import {cn} from "@/lib/utils";
-import {Card, CardTitle, CardHeader, CardContent, CardDescription, CardIcon} from "@/components/ui/card";
-import { HeartHandshake, Leaf, Speech, Trees, Users2 } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Card, CardTitle, CardHeader, CardContent, CardDescription, CardIcon } from "@/components/ui/card";
+import { HeartHandshake, Leaf, MoveDown, Speech, Trees, Users2 } from "lucide-react";
 
-const Pros =  React.forwardRef<
+const Pros = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className }) => {
@@ -36,7 +36,7 @@ const Pros =  React.forwardRef<
 
         <div className={cn("grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4", className)}>
             {data.map((item, index) => (
-                <Card className="p-6 mt-12 bg-muted-foreground/10" key={index}>
+                <Card className="p-6 mt-12 bg-muted-foreground/10 border-b border-lime-500" key={index}>
                     <CardHeader className="items-center">
                         <CardIcon className="text-lime-600">
                             {item.icon}
