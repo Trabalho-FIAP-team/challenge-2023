@@ -6,7 +6,7 @@ import { HeartHandshake, Leaf, MoveDown, Speech, Trees, Users2 } from "lucide-re
 const Pros = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
->(({ className }) => {
+>(({ className }, ref) => {
 
     const data = [
         {
@@ -34,7 +34,7 @@ const Pros = React.forwardRef<
 
     return (
 
-        <div className={cn("grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4", className)}>
+        <div className={cn("grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4", className)} ref={ref}>
             {data.map((item, index) => (
                 <Card className="p-6 mt-12 bg-muted-foreground/10 border-b border-lime-500" key={index}>
                     <CardHeader className="items-center">

@@ -11,42 +11,42 @@ const links: { [key: string]: { title: string; href: string; }[] } = {
     conhecaMais: [
         {
             title: "Sobre nós",
-            href: "/about",
+            href: "about",
         },
         {
             title: "Blog",
-            href: "/blog",
+            href: "blog",
         },
         {
             title: "Contato",
-            href: "/contact",
+            href: "contact",
         },
         {
             title: "FAQ",
-            href: "/faq",
+            href: "faq",
         },
     ],
     informacoesLegais: [
         {
             title: "Aviso Legal",
-            href: "/aviso-legal",
+            href: "aviso-legal",
         },
         {
             title: "Política de Privacidade",
-            href: "/privacy-policy",
+            href: "privacy-policy",
         },
         {
             title: "Termos de Serviço",
-            href: "/terms-of-service",
+            href: "terms-of-service",
         },
     ]
 }
 
-export const Footer = React.forwardRef<
+const Footer = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
->(({ className }) => (
-    <footer className={cn(className, "space-y-8 py-16 lg:space-y-16")}>
+>(({ className }, ref) => (
+    <footer className={cn(className, "space-y-8 py-16 lg:space-y-16")} ref={ref}>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
@@ -72,8 +72,8 @@ export const Footer = React.forwardRef<
                 <FooterMenuList>
                     <FooterMenuTitle>Conheça Mais</FooterMenuTitle>
                     {links['conhecaMais'].map((item, index) => (
-                        <FooterMenuItem>
-                            <Link href={item.href} legacyBehavior passHref>
+                        <FooterMenuItem key={item.href}>
+                            <Link href={'/' + item.href} legacyBehavior passHref>
                                 <FooterMenuLink>
                                     {item.title}
                                 </FooterMenuLink>
@@ -85,8 +85,8 @@ export const Footer = React.forwardRef<
                 <FooterMenuList>
                     <FooterMenuTitle>Informações Legais</FooterMenuTitle>
                     {links['informacoesLegais'].map((item, index) => (
-                        <FooterMenuItem>
-                            <Link href={item.href} legacyBehavior passHref>
+                        <FooterMenuItem key={item.href}>
+                            <Link href={'/' + item.href} legacyBehavior passHref>
                                 <FooterMenuLink>
                                     {item.title}
                                 </FooterMenuLink>
@@ -104,3 +104,7 @@ export const Footer = React.forwardRef<
 
     </footer>
 ));
+
+Footer.displayName = "Footer"
+
+export default Footer;

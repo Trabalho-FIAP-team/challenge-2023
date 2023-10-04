@@ -25,7 +25,7 @@ const Testimonials = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-    <section className={cn("", className)}>
+    <section className={cn("", className)} ref={ref}>
 
         <SectionHeader variant={"center"}>
             <SectionTitle>Depoimentos</SectionTitle>
@@ -73,7 +73,7 @@ const Testimonials = React.forwardRef<
                             <CardDescription className="text-lime-600 font-semibold">{testimonial.role}, {testimonial.company}</CardDescription>
                         </CardHeader>
                         <CardContent className="text-gray-500 dark:text-gray-400 italic">
-                            "{testimonial.text}"
+                            &ldquo;{testimonial.text}&rdquo;
                         </CardContent>
                     </Card>
                 </SwiperSlide>
@@ -81,5 +81,7 @@ const Testimonials = React.forwardRef<
         </Swiper>
     </section>
 ))
+
+Testimonials.displayName="Testimonials"
 
 export default Testimonials;

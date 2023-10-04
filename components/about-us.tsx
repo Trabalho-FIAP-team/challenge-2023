@@ -4,11 +4,11 @@ import { SectionHeader, SectionSubtitle, SectionTitle } from "@/components/ui/se
 import { Bird, Hand } from "lucide-react";
 import { Card } from "./ui/card";
 
-const Hero = React.forwardRef<
+const AboutUs = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-    <section className={cn("", className)}>
+    <section className={cn("", className)} ref={ref}>
 
         <SectionHeader variant={"center"}>
             <SectionTitle>Sobre Nós</SectionTitle>
@@ -42,4 +42,6 @@ const Hero = React.forwardRef<
     </section>
 ))
 
-export default Hero;
+AboutUs.displayName="AboutUs"
+
+export default AboutUs;

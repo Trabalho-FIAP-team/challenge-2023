@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { BadgeCheck } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { SectionTitle } from "@/components/ui/section";
+import Image from "next/image";
 
 const LearnWithUs = React.forwardRef<
     HTMLDivElement,
@@ -19,7 +20,7 @@ const LearnWithUs = React.forwardRef<
     ]
 
     return (
-        <section className={cn("flex border-b-2 border-t-2 flex-col lg:flex-row items-center gap-8 md:gap-20 xl:gap-36 lg:px-12 xl:px-32 2xl:px-72", className)}>
+        <section className={cn("flex border-b-2 border-t-2 flex-col lg:flex-row items-center gap-8 md:gap-20 xl:gap-36 lg:px-12 xl:px-32 2xl:px-72", className)} ref={ref}>
             <div className="lg:w-8/12 xl:w-6/12 ">
                 <div className="flex items-center gap-2 mb-4">
                     <span className="text-gray-600 dark:text-gray-400">Sobre</span>
@@ -38,12 +39,14 @@ const LearnWithUs = React.forwardRef<
                 </ul>
             </div>
             <div className="w-full lg:4/12 xl:w-6/12 flex justify-center items-center mb-16 mt-12 ">
-                <img src={"/images/blob-haikei (3).png"} className="w-11/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 max-w-[930px] absolute z-[-40]" alt="Learn with us" />
-                <img src={"/images/3d2.png"} className="w-72" alt="Learn with us" />
+                <Image src={"/images/blob-haikei (3).png"} className="w-11/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 max-w-[930px] absolute z-[-40]" alt="Learn with us" width={200} height={200} />
+                <Image src={"/images/3d2.png"} className="w-72" alt="Learn with us" width={200} height={200} />
             </div>
 
         </section>
     )
 })
+
+LearnWithUs.displayName="LearnWithUs"
 
 export default LearnWithUs;

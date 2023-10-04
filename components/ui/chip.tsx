@@ -33,7 +33,7 @@ export interface ChipProps
 const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
 ({ className, children, close = false, variant, size, ...props }, ref) => {
     return (
-        <div className={cn(chipVariants({ variant, size, className }))}>
+        <div className={cn(chipVariants({ variant, size, className }))} ref={ref}>
             <div className="font-normal leading-none max-w-full flex-initial">{children}</div>
             { close && (
                 <div className="flex flex-auto flex-row-reverse">

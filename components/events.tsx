@@ -26,7 +26,7 @@ const Events = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-    <section className={cn("", className)}>
+    <section className={cn("", className)} ref={ref}>
 
         <SectionHeader variant={"center"}>
             <SectionTitle>Eventos em Destaque!</SectionTitle>

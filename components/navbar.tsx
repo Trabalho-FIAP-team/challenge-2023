@@ -8,11 +8,11 @@ import {cn} from "@/lib/utils";
 import * as React from "react";
 import {Logo} from "@/components/logo";
 
-export const Navbar = React.forwardRef<
+const Navbar = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
->(({ className }) => (
-    <nav className={cn(className, "flex justify-between items-center py-2 h-16")}>
+>(({ className }, ref) => (
+    <nav className={cn(className, "flex justify-between items-center py-2 h-16")} ref={ref}>
       <div className="flex items-center justify-center gap-x-2">
         <Link href={'/'}>
             <Logo />
@@ -25,3 +25,7 @@ export const Navbar = React.forwardRef<
       </div>
     </nav>
 ));
+
+Navbar.displayName="Navbar"
+
+export default Navbar;
