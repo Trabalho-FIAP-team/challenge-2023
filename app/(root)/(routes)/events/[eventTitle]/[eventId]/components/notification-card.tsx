@@ -11,8 +11,6 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import toast from "react-hot-toast"
-import SendEventEmailButton from "@/lib/send-email-button"
 
 interface NotificatiionCardProps {
   eventTitle: string;
@@ -42,7 +40,7 @@ export function NotificationCard({
         </div>
       </CardContent>
       <CardFooter>
-        <SendEventEmailButton eventTitle={eventTitle} eventImage={eventImage}/>
+        <Button > teste vercel </Button>
       </CardFooter>
     </Card>
   )
