@@ -10,7 +10,6 @@ interface EventIdProps {
 }
 
 const EventIdPage = ({ params }: EventIdProps) => {
-
   function decodeString(inputString: string) {
     try {
       const decodedString = decodeURIComponent(inputString);

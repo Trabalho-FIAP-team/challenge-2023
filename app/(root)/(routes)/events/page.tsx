@@ -16,4 +16,6 @@ const EventsPage = () => {
     );
 }
 
+EventsPage.displayName = "Events"
+
 export default EventsPage;

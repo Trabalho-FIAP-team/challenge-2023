@@ -38,9 +38,8 @@ const LearnWithUs = React.forwardRef<
                     ))}
                 </ul>
             </div>
-            <div className="w-full lg:4/12 xl:w-6/12 flex justify-center items-center mb-16 mt-12 ">
-                <Image src={"/images/blob-haikei (3).png"} className="w-11/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 max-w-[930px] absolute z-[-40]" alt="Learn with us" width={200} height={200} />
-                <Image src={"/images/3d2.png"} className="w-72" alt="Learn with us" width={200} height={200} />
+            <div className="mb-16 mt-12 ">
+                <Image src={"/images/3d2.png"} alt="Learn with us" width={300} height={200} />
             </div>
 
         </section>
