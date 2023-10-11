@@ -21,3 +21,13 @@ enum UserRole {
   ADMIN
   USER
 }
+
+model Event { 
+  id String @id @default(uuid()) @map("_id") 
+  title String
+  thumb String
+  image String
+  author String
+  data String
+  text String
+}
