@@ -1,18 +1,23 @@
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL")
+  url      =  env("DATABASE_URL")
 }
 
 generator client {
   provider = "prisma-client-js"
 }
 
-model Event {
-  id     String @id @default(auto()) @map("_id") @db.ObjectId
-  thumb  String
-  title  String
-  image  String
-  author String
-  data   String
-  text   String
+model User {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  externalId String   @unique
+  attributes Json
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  role UserRole @default(USER)
+}
+
+enum UserRole {
+  ADMIN
+  USER
 }

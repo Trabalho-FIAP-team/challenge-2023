@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY} afterSignInUrl='/' afterSignUpUrl='/'>
       <html lang="en">
         <body className={font.className}>
           <RoutingProgress height="3px" color="#64a30d" options={{ showSpinner: false }} showOnShallow />
