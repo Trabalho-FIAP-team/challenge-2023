@@ -1,14 +1,9 @@
-import { Button } from "@/components/ui/button";
-
-
-const AdminPage = () => {
+const AdminLayout = () => {
   return (
-    <form>
-      <Button>
-        Teste
-      </Button>
-    </form>
+    <div>
+      teste
+    </div>
   );
 }
  
-export default AdminPage;
+export default AdminLayout;
