@@ -65,6 +65,6 @@ export async function POST(
     return NextResponse.json(event);
   } catch (error) {
     console.log('[EVENTS_POST]', error);
-    return new NextResponse("Internal error", { status: 500 });
+    return new NextResponse("Internal error [POST]", { status: 500 });
   }
 };

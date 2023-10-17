@@ -1,5 +1,3 @@
-"use client"
-
 import * as React from "react"
 import Link from "next/link"
 import {
@@ -15,6 +13,7 @@ import { Flame } from "lucide-react"
 import { events, games } from "@/data"
 
 export function MainNav() {
+
   return (
     <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList>

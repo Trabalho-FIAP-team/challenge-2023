@@ -5,7 +5,7 @@ const AuthLayout = ({
   children: React.ReactNode
 }) => {
   return (
-    <div>{children}</div>
+    <div className="h-full flex justify-center items-center bg-[url('/images/auth.svg')] bg-cover">{children}</div>
   )
 }
 
