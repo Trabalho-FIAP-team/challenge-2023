@@ -11,16 +11,35 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import axios from 'axios'
+import { NextResponse } from "next/server"
+import { toast } from "react-hot-toast"
 
 interface NotificatiionCardProps {
   eventTitle: string;
   eventImage: string;
 }
 
+
 export function NotificationCard({
   eventTitle,
   eventImage
 }: NotificatiionCardProps) {
+
+  const sendEmail = async () => {
+    try {
+      const response = await axios.post('/api/send');
+      if (response.status === 200) {
+        toast.success('Verifique a caixa de entrada do seu Email!');
+      } else {
+        toast.error('Erro ao enviar o Email');
+      }
+    } catch (error) {
+      toast.error('Erro ao enviar o Email');
+    }
+  };
+  
+
   return (
     <Card>
       <CardHeader>
@@ -40,7 +59,9 @@ export function NotificationCard({
         </div>
       </CardContent>
       <CardFooter>
-        <Button > teste vercel </Button>
+        <Button onClick={sendEmail}> 
+          Enviar email
+        </Button>
       </CardFooter>
     </Card>
   )

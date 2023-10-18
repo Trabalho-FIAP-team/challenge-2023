@@ -57,7 +57,6 @@ const EventIdPage = ({ params }: EventIdProps) => {
         <div className="flex justify-center">
           <NotificationCard 
             eventTitle={params.eventTitle}
-            eventImage={image}
           />
         </div>
       </div>
