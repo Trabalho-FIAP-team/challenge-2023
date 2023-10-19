@@ -71,4 +71,6 @@ const Events = React.forwardRef<
     </section>
 ))
 
+Events.displayName = "Events"
+
 export default Events;

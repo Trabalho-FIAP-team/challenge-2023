@@ -54,4 +54,6 @@ const Pros = React.forwardRef<
     );
 })
 
+Pros.displayName = "Pros"
+
 export default Pros;
