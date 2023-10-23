@@ -40,6 +40,7 @@ export function NotificationCard({
       setIsLoading(true)
       const response = await axios.post('/api/send');
       if (response.status === 200) {
+
         toast.success('Verifique a caixa de entrada do seu Email!');
       } else {
         toast.error('Erro ao enviar o Email');

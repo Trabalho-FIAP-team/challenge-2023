@@ -1,4 +1,4 @@
-import { EmailTemplate } from '@/components/email-template';
+import EmailTemplate  from '@/app/(root)/(routes)/events/[eventTitle]/[eventId]/components/email-template';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import * as React from 'react';
@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST() {
   try {
-    
+
     const authUser = auth();
     const userId = authUser.sessionClaims?.sub
 
@@ -21,7 +21,7 @@ export async function POST() {
         from: 'EcoConnect <contact@ecoconnect.online>',
         to: [email],
         subject: "EcoConnect Event",
-        react: EmailTemplate({ firstName: "Eco" }) as React.ReactElement,
+        react: EmailTemplate({ firstName: "Eco", fromEmail: email }) as React.ReactElement,
       });
       console.log(data)
       return NextResponse.json(data);
