@@ -42,6 +42,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.47.0",
     "react-hot-toast": "^2.4.1",
+    "react-spinner": "^0.2.7",
+    "react-spinners": "^0.13.8",
     "resend": "^1.1.0",
     "svix": "^1.13.0",
     "swiper": "^10.2.0",

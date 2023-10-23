@@ -40,7 +40,7 @@ const EventIdPage = ({ params }: EventIdProps) => {
           src={image}
           alt='Imagem EventId'
           width={1520}
-          height={600}
+          height={200}
         />
       </div>
 

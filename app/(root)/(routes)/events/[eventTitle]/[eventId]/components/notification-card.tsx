@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form"
 import { Switch } from "@/components/ui/switch"
 import { toast } from "react-hot-toast"
+import { useState } from "react"
 
 const FormSchema = z.object({
   notifications: z.boolean().default(false).optional(),
@@ -32,8 +33,11 @@ export function NotificationCard({
     resolver: zodResolver(FormSchema),
   })
 
+  const [isLoading, setIsLoading] = useState(false)
+
   const sendEmail = async () => {
     try {
+      setIsLoading(true)
       const response = await axios.post('/api/send');
       if (response.status === 200) {
         toast.success('Verifique a caixa de entrada do seu Email!');
@@ -42,6 +46,8 @@ export function NotificationCard({
       }
     } catch (error) {
       toast.error('Erro ao enviar o Email');
+    } finally {
+      setIsLoading(false)
     }
   };
 
@@ -55,25 +61,28 @@ export function NotificationCard({
               control={form.control}
               name="notifications"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
+                <FormItem className="flex flex-rowitems-center justify-between rounded-lg border p-3 shadow-sm">
                   <div className="space-y-0.5">
                     <FormLabel>Inscrição no(a) {eventTitle}</FormLabel>
                     <FormDescription>
                       Quer receber emails e atualizações sobre esse evento?
                     </FormDescription>
                   </div>
-                  <FormControl>
+                  <FormControl
+                  >
                     <Switch
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
                   </FormControl>
+                  <div>
+                    <Button disabled={isLoading}>{isLoading ? 'Sending...' : 'Submit'}</Button>
+                  </div>
                 </FormItem>
               )}
             />
           </div>
         </div>
-        <Button onClick={() => sendEmail()}>Submit</Button>
       </form>
     </Form>
   )
