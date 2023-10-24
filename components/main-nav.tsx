@@ -11,8 +11,51 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Flame } from "lucide-react"
 import { events, games } from "@/data"
+import { auth } from "@clerk/nextjs"
+import { prisma } from "@/lib/db"
+import { useEffect, useState } from "react"
+import { NextResponse } from "next/server"
 
 export function MainNav() {
+
+  const [isAdmin, setIsAdmin] = useState(false)
+
+  const isAdminUser = async () => {
+    const authUser = auth();
+    const userId = authUser.sessionClaims?.sub;
+  
+    if (!userId) {
+      return new NextResponse('Usuário não autenticado', { status: 403 });
+    }
+  
+    try {
+      const user = await prisma.user.findUnique({
+        where: {
+          id: userId,
+        },
+      });
+  
+      if (!user) {
+        return new NextResponse('Usuário não encontrado', { status: 400 });
+      }
+  
+      if (user.role === 'ADMIN') {
+        console.log('admin aaaaaaaaaaaaaaaaaaaaaaaaa')
+        setIsAdmin(true)
+        return new NextResponse('O usuário é um administrador', { status: 200 });
+      } else {
+        console.log('não é nada aaaaaaaaaaaaaaaaaaaaaaaa')
+        return new NextResponse('O usuário não é um administrador', { status: 200 });
+      }
+    } catch (error) {
+      console.error('Erro ao buscar dados do usuário:', error);
+      return new NextResponse('Erro interno do servidor', { status: 500 });
+    }
+  }
+
+  useEffect(() => {
+    isAdminUser()
+  }, [])
 
   return (
     <NavigationMenu className="hidden lg:flex">
@@ -36,7 +79,7 @@ export function MainNav() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-r to-lime-700 from-lime-500 p-6 no-underline outline-none focus:shadow-md"
                     href="/events"
                   >
-                    <Flame className="h-6 w-6 text-white"/>
+                    <Flame className="h-6 w-6 text-white" />
                     <div className="mb-2 mt-4 text-lg text-white font-medium">
                       Eventos em Alta!
                     </div>
@@ -81,20 +124,15 @@ export function MainNav() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/video" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Video Pitch
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/admin" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Admin
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        { !isAdmin ? null :
+          <NavigationMenuItem>
+            <Link href="/admin" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Admin
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        }
       </NavigationMenuList>
     </NavigationMenu>
   )

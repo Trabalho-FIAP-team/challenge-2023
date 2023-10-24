@@ -21,7 +21,14 @@ export async function POST() {
         from: 'EcoConnect <contact@ecoconnect.online>',
         to: [email],
         subject: "EcoConnect Event",
-        react: EmailTemplate({ firstName: "Eco", fromEmail: email }) as React.ReactElement,
+        react: EmailTemplate({ 
+          userName: "Rafa", 
+          fromEmail: email, 
+          eventAuthor: 'Friedrich Nietzsche',
+          eventData: '25-12-2023',
+          eventTitle: 'Seminário de Tecnologia',
+          thumb: 'https://picsum.photos/id/200/800/400'
+        }) as React.ReactElement,
       });
       console.log(data)
       return NextResponse.json(data);

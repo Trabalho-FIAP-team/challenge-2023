@@ -1,6 +1,6 @@
+import { Thumb } from "@radix-ui/react-switch"
 import {
   Body,
-  Button,
   Container,
   Head,
   Heading,
@@ -15,18 +15,27 @@ import {
 } from "@react-email/components"
 
 interface ReminderEmailProps {
-  firstName?: string
+  userName?: string
+  eventTitle: string
+  thumb: string
+  eventAuthor: string
+  eventData: string
+  eventText?: string
+  eventId?: string
   fromEmail: string
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_APP_URL
-
 export default function EmailTemplate({
-  firstName = "there",
-  fromEmail,
+  userName = "there",
+  eventTitle,
+  thumb,
+  eventAuthor,
+  eventData,
+  eventText,
+  eventId,
+  fromEmail
 }: ReminderEmailProps) {
-  const previewText = `Hi ${firstName}, Don&apos;t Forget to Document Your Thoughts!`
-
+  const previewText = `Hi ${userName}, Confirmação da Sua inscrição no ${eventTitle}`
   return (
     <Html>
       <Head>
@@ -49,10 +58,10 @@ export default function EmailTemplate({
 
             <Section className="mt-4">
               <Heading className="text-center text-2xl font-semibold text-green-600">
-                Você acabou de se inscrever no evento HARD CODE POR ENQUANTO!
+                Você acabou de se inscrever no evento {eventTitle}!
               </Heading>
               <Hr className="my-4" />
-              <Text className="m-0 text-base">Hi {firstName},</Text>
+              <Text className="m-0 text-base">Hi {userName},</Text>
               <Text className="mt-6 text-base">
                 Are you ready for today&apos;s dose of reflection and
                 self-discovery? 🌟 It&apos;s time to keep your digital journal
@@ -70,7 +79,7 @@ export default function EmailTemplate({
                 your thoughts flow freely. 🌌
               </Text>
               <Img
-                src="https://scribbly.s3.ap-south-1.amazonaws.com/journal_z0t8j8.webp"
+                src={thumb}
                 alt="Illustration of a girl writing in a journal"
                 height={424}
                 className="mt-10 aspect-video w-full object-cover"
@@ -114,7 +123,7 @@ export default function EmailTemplate({
                 </Link>
               </Text>
               <Text className="mb-0 mt-4">
-                @ Accretence {new Date().getFullYear()}
+                @ EcoConnect {new Date().getFullYear()}
               </Text>
             </Section>
           </Container>
