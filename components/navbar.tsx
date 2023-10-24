@@ -7,6 +7,7 @@ import { MainNav } from "./main-nav"
 import {cn} from "@/lib/utils";
 import * as React from "react";
 import {Logo} from "@/components/logo";
+import { Menu } from "lucide-react"
 
 const Navbar = React.forwardRef<
     HTMLDivElement,
@@ -19,6 +20,7 @@ const Navbar = React.forwardRef<
         </Link>
       </div>
       <div className="flex items-center gap-x-4 ">
+          <Menu className="block md:hidden"/>
           <MainNav />
           <ThemeToggle />
           <UserButton afterSignOutUrl="/" />

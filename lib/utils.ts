@@ -1,8 +1,6 @@
-import { auth } from "@clerk/nextjs";
+
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { prisma } from "./db";
-import { User, UserRole } from "@prisma/client";
  
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

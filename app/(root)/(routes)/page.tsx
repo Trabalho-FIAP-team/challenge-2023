@@ -10,10 +10,10 @@ export default function RootPage() {
     <main className="w-center space-y-20">
       <Hero />
       <Pros />
+      <Events />
       <LearnWithUs className="py-6" />
       <Testimonials  />
       <AboutUs />
-      <Events />
     </main>
   )
 }

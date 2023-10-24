@@ -36,12 +36,12 @@ const Pros = React.forwardRef<
 
         <div className={cn("grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4", className)} ref={ref}>
             {data.map((item, index) => (
-                <Card className="p-6 mt-12 bg-muted-foreground/10" key={index}>
+                <Card className="md:p-6 p-3 bg-muted-foreground/10" key={index}>
                     <CardHeader className="items-center">
                         <CardIcon className="text-lime-600">
                             {item.icon}
                         </CardIcon>
-                        <CardTitle>
+                        <CardTitle className="text-center">
                             {item.title}
                         </CardTitle>
                     </CardHeader>

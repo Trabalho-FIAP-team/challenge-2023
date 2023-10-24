@@ -99,7 +99,7 @@ const Footer = React.forwardRef<
         </div>
 
         <p className="text-xs text-gray-500">
-            Design by <span>@Grupo-27</span>
+            Design by <span>@grupo-ecoconnect</span>
         </p>
 
     </footer>

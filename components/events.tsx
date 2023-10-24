@@ -41,13 +41,17 @@ const Events = React.forwardRef<
             className="!pb-12"
             breakpoints={
                 {
-                    480: {
+                    375: {
                         slidesPerView: 1,
-                        spaceBetween: 50
+                        spaceBetween: 5
+                    },
+                    390: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
                     },
                     768: {
                         slidesPerView: 2,
-                        spaceBetween: 50
+                        spaceBetween: 20
                     },
                     976: {
                         slidesPerView: 3,
