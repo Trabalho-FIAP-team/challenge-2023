@@ -20,7 +20,7 @@ const LearnWithUs = React.forwardRef<
     ]
 
     return (
-        <section className={cn("flex border-b-2 border-t-2 flex-col lg:flex-row items-center gap-8 md:gap-20 xl:gap-36 lg:px-12 xl:px-32 2xl:px-72 dark:bg-lime-600 dark:rounded-lg " , className)} ref={ref}>
+        <section className={cn("flex border-b-2 border-t-2 flex-col lg:flex-row items-center gap-8 md:gap-20 xl:gap-36 lg:px-12 xl:px-32 2xl:px-72 dark:p-4 dark:bg-lime-600 dark:rounded-lg " , className)} ref={ref}>
             <div className="lg:w-8/12 xl:w-6/12 ">
                 <div className="flex items-center gap-2 mb-4">
                     <span className="dark:text-white">Sobre</span>

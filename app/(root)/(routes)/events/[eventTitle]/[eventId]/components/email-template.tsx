@@ -1,6 +1,5 @@
 import { Thumb } from "@radix-ui/react-switch"
 import {
-  Body,
   Container,
   Head,
   Heading,
@@ -10,9 +9,11 @@ import {
   Link,
   Preview,
   Section,
-  Tailwind,
   Text,
 } from "@react-email/components"
+
+import { Tailwind } from '@react-email/tailwind'
+import { Body } from '@react-email/body'
 
 interface ReminderEmailProps {
   userName?: string
