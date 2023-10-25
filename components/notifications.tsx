@@ -8,6 +8,7 @@ import {Card, CardDescription, CardHeader, CardIcon, CardTitle} from "@/componen
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {Notification, Event} from "@/types";
+import {Badge} from "@/components/ui/badge";
 
 export function Notifications() {
 
@@ -26,10 +27,13 @@ export function Notifications() {
     return (
         <Popover>
             <PopoverTrigger asChild>
-                <Button variant="ghost" size="icon">
-                    <Bell className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
-                    <span className="sr-only">Notifications</span>
-                </Button>
+                <div className="relative">
+                    <Button variant="ghost" size="icon">
+                        <Bell className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+                        <span className="sr-only">Notifications</span>
+                    </Button>
+                    <Badge variant="default" value={notifications.length}></Badge>
+                </div>
             </PopoverTrigger>
             <PopoverContent className="w-[400px] overflow-y-auto pb-1 mb-1  flex flex-col">
 
