@@ -1,3 +1,4 @@
+import React from "react";
 
 export interface Game {
   gameTitle: string; 
@@ -31,4 +32,10 @@ export interface Testimonial {
   company: string;
   text: string;
   authorImage: string;
+}
+
+export interface Notification {
+  title: string;
+  description: string;
+  icon: JSX.Element;
 }

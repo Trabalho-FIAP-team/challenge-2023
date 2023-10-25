@@ -8,6 +8,7 @@ import {cn} from "@/lib/utils";
 import * as React from "react";
 import {Logo} from "@/components/logo";
 import { Menu } from "lucide-react"
+import {Notifications} from "@/components/notifications";
 
 const Navbar = React.forwardRef<
     HTMLDivElement,
@@ -23,6 +24,7 @@ const Navbar = React.forwardRef<
           <Menu className="block md:hidden"/>
           <MainNav />
           <ThemeToggle />
+          <Notifications />
           <UserButton afterSignOutUrl="/" />
       </div>
     </nav>
