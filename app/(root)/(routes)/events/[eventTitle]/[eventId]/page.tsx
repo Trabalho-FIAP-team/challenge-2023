@@ -30,7 +30,7 @@ const EventIdPage = ({ params }: EventIdProps) => {
     return event ? event.eventText : undefined;
   }
 
-  let image: string = getImageByEventId(params.eventId) || '';
+  const image: string = getImageByEventId(params.eventId) || '';
 
   return (
     <div>
@@ -44,21 +44,22 @@ const EventIdPage = ({ params }: EventIdProps) => {
         />
       </div>
 
-      <div className="mx-40 mt-12 grid flex-wrap md:grid-cols-3 sm:grid-cols-1 gap-10 ">
-        <div className="col-span-2">
-          <h1 className="mt-4 mb-3 text-3xl font-extrabold text-gray-900 ml-8 dark:text-white md:text-5xl lg:text-4xl" >
-            {decodeString(params.eventTitle)}
-          </h1>
-          <p className="text-md text-gray-600 dark:text-gray-100 ml-8 mr-10 text-left">
-            {getTextByEventId(params.eventId)}
-            {getTextByEventId(params.eventId)}
-          </p>
-        </div>
-        <div className="flex justify-center">
-          <NotificationCard eventTitle={decodeString(params.eventTitle)}/>
+      <div className="flex items-center justify-center">
+        <div className="lg:mx-40 mt-12 grid md:grid-cols-3 sm:grid-cols-1 gap-10">
+          <div className="col-span-2">
+            <h1 className="mt-4 mb-3 text-2xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl md:text-left text-center">
+              {decodeString(params.eventTitle)}
+            </h1>
+            <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left overflow-hidden">
+              {getTextByEventId(params.eventId)}
+              {getTextByEventId(params.eventId)}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <NotificationCard eventTitle={decodeString(params.eventTitle)} />
+          </div>
         </div>
       </div>
-
     </div>
   );
 }

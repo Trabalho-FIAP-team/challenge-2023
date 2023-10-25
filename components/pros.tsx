@@ -2,6 +2,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Card, CardTitle, CardHeader, CardContent, CardDescription, CardIcon } from "@/components/ui/card";
 import { HeartHandshake, Leaf, MoveDown, Speech, Trees, Users2 } from "lucide-react";
+import VideoIndex from "./video-index";
 
 const Pros = React.forwardRef<
     HTMLDivElement,
@@ -33,23 +34,24 @@ const Pros = React.forwardRef<
     ]
 
     return (
-
-        <div className={cn("grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4", className)} ref={ref}>
-            {data.map((item, index) => (
-                <Card className="md:p-6 p-3 bg-muted-foreground/10" key={index}>
-                    <CardHeader className="items-center">
-                        <CardIcon className="text-lime-600">
-                            {item.icon}
-                        </CardIcon>
-                        <CardTitle className="text-center">
-                            {item.title}
-                        </CardTitle>
-                    </CardHeader>
-                    <CardDescription className="text-center">
-                        {item.description}
-                    </CardDescription>
-                </Card>
-            ))}
+        <div>
+            <div className={cn("grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4", className)} ref={ref}>
+                {data.map((item, index) => (
+                    <Card className="md:p-6 p-3 bg-muted-foreground/10" key={index}>
+                        <CardHeader className="items-center">
+                            <CardIcon className="text-lime-600">
+                                {item.icon}
+                            </CardIcon>
+                            <CardTitle className="text-center">
+                                {item.title}
+                            </CardTitle>
+                        </CardHeader>
+                        <CardDescription className="text-center">
+                            {item.description}
+                        </CardDescription>
+                    </Card>
+                ))}
+            </div>
         </div>
     );
 })

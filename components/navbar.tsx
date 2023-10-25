@@ -9,6 +9,7 @@ import * as React from "react";
 import {Logo} from "@/components/logo";
 import { Menu } from "lucide-react"
 import {Notifications} from "@/components/notifications";
+import { MobileNav } from "./mobile-nav"
 
 const Navbar = React.forwardRef<
     HTMLDivElement,
@@ -21,10 +22,10 @@ const Navbar = React.forwardRef<
         </Link>
       </div>
       <div className="flex items-center gap-x-4 ">
-          <Menu className="block md:hidden"/>
           <MainNav />
           <ThemeToggle />
           <Notifications />
+          <MobileNav />
           <UserButton afterSignOutUrl="/" />
       </div>
     </nav>

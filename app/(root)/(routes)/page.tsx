@@ -4,6 +4,7 @@ import LearnWithUs from "@/components/learn-with-us";
 import Testimonials from "@/components/testimonials";
 import AboutUs from "@/components/about-us";
 import Events from "@/components/events";
+import VideoIndex from "@/components/video-index";
 
 export default function RootPage() {
   return (

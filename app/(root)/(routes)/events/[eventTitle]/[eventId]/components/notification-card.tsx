@@ -1,7 +1,7 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import { useForm, useFormContext } from "react-hook-form"
 import * as z from "zod"
 import axios from "axios"
 
@@ -17,6 +17,7 @@ import {
 import { Switch } from "@/components/ui/switch"
 import { toast } from "react-hot-toast"
 import { useState } from "react"
+
 
 const FormSchema = z.object({
   notifications: z.boolean().default(false).optional(),
@@ -62,24 +63,23 @@ export function NotificationCard({
               control={form.control}
               name="notifications"
               render={({ field }) => (
-                <FormItem className="flex flex-rowitems-center justify-between rounded-lg border p-3 shadow-sm">
-                  <div className="space-y-0.5">
-                    <FormLabel>Inscrição no(a) {eventTitle}</FormLabel>
-                    <FormDescription>
-                      Quer receber emails e atualizações sobre esse evento?
-                    </FormDescription>
-                  </div>
-                  <FormControl
-                  >
-                    <Switch
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                  <div>
-                    <Button disabled={isLoading}>{isLoading ? 'Sending...' : 'Submit'}</Button>
-                  </div>
-                </FormItem>
+                <div className="flex flex-col justify-center items-center">
+                  <FormItem className="flex flex-rowitems-center justify-between rounded-lg border p-3 shadow-sm">
+                    <div className="space-y-0.5">
+                      <FormLabel>Inscrição no(a) {eventTitle}</FormLabel>
+                      <FormDescription>
+                        Quer receber emails e atualizações sobre esse evento?
+                      </FormDescription>
+                    </div>
+                    <div>
+                      <Button
+                        disabled={isLoading}
+                      >
+                        {isLoading ? 'Sending...' : 'Submit'}
+                      </Button>
+                    </div>
+                  </FormItem>
+                </div>
               )}
             />
           </div>
