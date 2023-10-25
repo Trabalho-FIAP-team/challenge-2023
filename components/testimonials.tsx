@@ -40,7 +40,22 @@ const Testimonials = React.forwardRef<
             className="!pb-12"
             breakpoints={
                 {
-
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
+                    330: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
+                    350: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
+                    360: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
                     375: {
                         slidesPerView: 1,
                         spaceBetween: 5

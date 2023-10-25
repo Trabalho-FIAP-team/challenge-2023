@@ -51,8 +51,8 @@ export function Notifications() {
 
                 <ul className="w-full p-1 space-y-3 max-h-[400px] ">
                     {notifications.map((notification, index) => (
-                        <li className="last:pb-3">
-                            <Card className="p-3.5 space-y-2" key={index}>
+                        <li className="last:pb-3" key={index}>
+                            <Card className="p-3.5 space-y-2" >
                                 <CardHeader className="!p-0 items-center flex flex-row justify-start gap-2">
                                     <CardIcon className="text-lime-600 !w-min !h-min">
                                         {notification.icon}
