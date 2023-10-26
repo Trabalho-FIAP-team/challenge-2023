@@ -94,7 +94,7 @@ export const testimonials: Testimonial[] = [
     role: "Especialista em Energia Renovável",
     company: "Schneider Electric",
     text: "Minha carreira na Schneider Electric me permitiu ser parte ativa na transformação do setor energético. Estamos moldando um futuro sustentável e sou grato por fazer parte desse movimento.",
-    authorImage: "/images/testimonials/andre-souza.jpg"
+    authorImage: "https://github.com/fodase.png"
   },
   {
     name: "Mark Smith",
@@ -187,8 +187,8 @@ export const events: Event[] =[
     eventId: '5'
   },
   {
-    eventImage: "https://picsum.photos/id/205/348/185",
-    thumb: "https://picsum.photos/id/205/800/400",
+    eventImage: "https://github.com/fodase.png",
+    thumb: "https://github.com/fodase.png",
     eventTitle: "Simpósio de Inteligência Artificial",
     eventAuthor: "AI Innovations",
     eventData: "2024-02-15",
