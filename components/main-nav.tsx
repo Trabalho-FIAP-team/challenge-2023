@@ -11,8 +11,27 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Flame } from "lucide-react"
 import { events, games } from "@/data"
+import axios from "axios"
+import { useUser } from "@clerk/nextjs"
 
 export function MainNav() {
+  const [user, setUser] = React.useState<{
+    publicMetadata: {
+      isAdmin: string
+    }
+  }>({} as {
+    publicMetadata: {
+      isAdmin: string
+    }
+  })
+
+  const clerkUser = useUser();
+
+  React.useEffect(() => {
+    axios.post(`/api/user`).catch(() => null)
+    setUser(clerkUser.user as any)
+  }, [clerkUser])
+  
   return (
     <NavigationMenu className="md:flex hidden">
       <NavigationMenuList>
@@ -80,13 +99,15 @@ export function MainNav() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/admin" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Admin
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        {user?.publicMetadata?.isAdmin && (
+          <NavigationMenuItem>
+            <Link href="/admin" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Admin
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        )}
       </NavigationMenuList>
     </NavigationMenu>
   )

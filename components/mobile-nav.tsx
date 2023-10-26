@@ -16,9 +16,30 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useUser } from "@clerk/nextjs"
+import React from "react"
+import axios from "axios"
 
 
 export function MobileNav() {
+
+  const [user, setUser] = React.useState<{
+    publicMetadata: {
+      isAdmin: string
+    }
+  }>({} as {
+    publicMetadata: {
+      isAdmin: string
+    }
+  })
+
+  const clerkUser = useUser();
+
+  React.useEffect(() => {
+    axios.post(`/api/user`).catch(() => null)
+    setUser(clerkUser.user as any)
+  }, [clerkUser])
+  
 
   const router = useRouter()
   const routes = [
@@ -54,7 +75,7 @@ export function MobileNav() {
         <SheetTrigger asChild>
           <Button variant="ghost"><Menu /></Button>
         </SheetTrigger>
-        <SheetContent className="w-[250px] sm:w-[300px]">
+        <SheetContent className="w-[150px] sm:w-[100px]">
           <div className="space-y-4 flex flex-col h-full text-primary">
             <div className="flex-1 flex justify-center">
               <div className="space-y-2">

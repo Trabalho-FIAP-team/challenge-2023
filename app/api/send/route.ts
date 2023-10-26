@@ -12,11 +12,9 @@ export async function POST() {
     const authUser = auth();
     const userId = authUser.sessionClaims?.sub
 
-    console.log(userId)
     if (userId) {
       const user = await clerkClient.users.getUser(userId);
       const email = user.emailAddresses[0].emailAddress
-      console.log(email)
       const data = await resend.emails.send({
         from: 'EcoConnect <contact@ecoconnect.online>',
         to: [email],
@@ -30,7 +28,6 @@ export async function POST() {
           thumb: 'https://picsum.photos/id/200/800/400'
         }) as React.ReactElement,
       });
-      console.log(data)
       return NextResponse.json(data);
     }
   } catch (error) {
