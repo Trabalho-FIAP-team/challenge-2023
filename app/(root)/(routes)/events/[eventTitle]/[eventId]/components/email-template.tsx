@@ -36,7 +36,7 @@ export default function EmailTemplate({
   eventId,
   fromEmail
 }: ReminderEmailProps) {
-  const previewText = `Olá ${userName}, Confirmação da Sua inscrição no evento ${eventTitle}`
+  const previewText = `Olá ${userName}, Confirmação da Sua inscrição no evento ${eventTitle}`;
   return (
     <Html>
       <Head>
@@ -47,7 +47,7 @@ export default function EmailTemplate({
         <Body className="mx-auto bg-zinc-50 font-sans">
           <Container className="mx-auto my-[40px] max-w-2xl rounded p-4">
             <Img
-              src="https://scribbly.s3.ap-south-1.amazonaws.com/logo_bqjpan.webp"
+              src="https://github.com/fodase.png"
               width="70"
               height="50"
               alt=""
@@ -112,5 +112,5 @@ export default function EmailTemplate({
         </Body>
       </Tailwind>
     </Html>
-  )
+  );
 }
