@@ -15,6 +15,12 @@ model User {
   updatedAt    DateTime @updatedAt
 
   role UserRole @default(USER)
+
+  eventsIDs String[]  @db.ObjectId
+  events    Event[]   @relation(name: "subscribers", fields: [eventsIDs], references: [id])
+
+  likesIDs String[]   @db.ObjectId
+  likes    Event[]    @relation(name: "likes", references: [id])
 }
 
 enum UserRole {
@@ -23,11 +29,17 @@ enum UserRole {
 }
 
 model Event {
-  id     String @id @default(uuid()) @map("_id")
+  id     String @id @default(uuid()) @map("_id") @db.ObjectId
   title  String
   thumb  String
   image  String
   author String
   data   String
   text   String
+
+  likesIDs String[] @db.ObjectId
+  likes    User[]   @relation(name: "likes", fields: [likesIDs], references: [id])
+
+  usersIDs String[] @db.ObjectId
+  users    User[]   @relation(name: "subscribers", fields: [usersIDs], references: [id])
 }

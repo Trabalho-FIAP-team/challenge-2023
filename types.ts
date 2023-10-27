@@ -8,12 +8,12 @@ export interface Game {
 }
 
 export interface Event {
-  eventTitle: string;
+  title: string;
   thumb: string;
-  eventImage: string;
-  eventAuthor: string;
-  eventData: string;
-  eventText: string;
+  image: string;
+  author: string;
+  data: string;
+  text: string;
   eventId: string;
 }
 

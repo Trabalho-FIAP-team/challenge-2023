@@ -1,8 +1,11 @@
 import {NextResponse} from "next/server";
-import {events} from "@/data";
+import {PrismaClient} from "@prisma/client";
+
+const prisma = new PrismaClient()
 
 export async function GET() {
     try {
+        const events = await prisma.event.findMany();
         return NextResponse.json(events);
     } catch (error) {
         return NextResponse.error();

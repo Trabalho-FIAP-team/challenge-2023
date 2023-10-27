@@ -39,7 +39,7 @@ export function NotificationCard({
   const sendEmail = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.post('/api/send');
+      const response = await axios.post('/api/subscriptions');
       if (response.status === 200) {
 
         toast.success('Verifique a caixa de entrada do seu Email!');

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import EventAvatar from "./event-avatar";
 import { Button } from "@/components/ui/button";
-import { Event } from "@/types";
+import { Event } from "@prisma/client";
 import Image from "next/image";
 
 type EventCardProps = Event;
@@ -23,15 +23,15 @@ const EventCard = ({ event }: { event: EventCardProps }) => {
           />
         </div>
         <div className="p-4">
-          <h2 className="font-bold text-lg truncate">{event.eventTitle}</h2>
-          <p className="text-sm text-gray-600 dark:text-gray-100 line-clamp-2">{event.eventText}</p>
+          <h2 className="font-bold text-lg truncate">{event.title}</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-100 line-clamp-2">{event.text}</p>
           <div className="flex items-center mt-4 space-x-2">
             <EventAvatar />
-            <h2 className="text-sm font-medium text-black dark:text-gray-100 "> {event.eventAuthor} | {event.eventData}</h2>
+            <h2 className="text-sm font-medium text-black dark:text-gray-100 "> {event.author} | {event.data}</h2>
           </div>
           <Link
             className="mt-7 flex justify-start"
-            href={`/events/${event.eventTitle}/${event.eventId}`}
+            href={`/events/${event.title}/${event.id}`}
           >
             <Button variant={"outline"}>
               Saber mais <ArrowRight />
