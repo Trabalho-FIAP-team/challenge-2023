@@ -3,6 +3,7 @@
 import EventCard from './components/event-card';
 import {Event} from "@prisma/client";
 import axios from "axios";
+import {useEffect, useState} from "react";
 
 const EventsPage = () => {
 
