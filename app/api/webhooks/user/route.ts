@@ -7,6 +7,8 @@ import { Webhook, WebhookRequiredHeaders } from "svix";
 const webhookSecret = process.env.WEBHOOK_SECRET || "";
 
 async function handler(request: Request) {
+  console.log(webhookSecret)
+
   const payload = await request.json();
   const headersList = headers();
   const heads = {
@@ -22,6 +24,7 @@ async function handler(request: Request) {
       JSON.stringify(payload),
       heads as IncomingHttpHeaders & WebhookRequiredHeaders
     ) as Event;
+
   } catch (err) {
     console.error((err as Error).message);
     return NextResponse.json({}, { status: 400 });
@@ -40,6 +43,7 @@ async function handler(request: Request) {
       update: { attributes },
     });
   }
+  return NextResponse.json({}, { status: 200});
 }
 
 type EventType = "user.created" | "user.updated" | "*";

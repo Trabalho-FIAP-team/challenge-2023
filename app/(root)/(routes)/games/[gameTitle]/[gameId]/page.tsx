@@ -1,3 +1,4 @@
+import BackButton from "@/components/back-button";
 import { games } from "@/data";
 
 
@@ -24,7 +25,10 @@ const GameIdPage = ({
 
   return (
     <div>
-      <h1 className="mb-6 text-3xl font-extrabold text-gray-900 flex justify-start dark:text-white md:text-5xl lg:text-5xl border-b-2" >{`${decodeString(params.gameTitle)}`}</h1>
+      <div className='flex items-center justify-start '>
+        <BackButton />
+        <h1 className="mb-6 text-3xl font-extrabold text-gray-900 flex justify-start dark:text-white md:text-5xl lg:text-5xl border-b-2" >{`${decodeString(params.gameTitle)}`}</h1>
+      </div>
       <div className="flex justify-center mt-12 mb-2">
         <iframe
           src={`https://wordwall.net/pt/embed/${params.gameId}`}

@@ -1,7 +1,6 @@
 "use client";
 
 import EventCard from './components/event-card';
-import {useEffect, useState} from "react";
 import {Event} from "@prisma/client";
 import axios from "axios";
 

@@ -16,17 +16,33 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useUser } from "@clerk/nextjs"
+import React, { useEffect, useState } from "react"
+import axios from "axios"
 
 
 export function MobileNav() {
 
+  const [user, setUser] = useState<{
+    publicMetadata: {
+      isAdmin: string
+    }
+  }>({} as {
+    publicMetadata: {
+      isAdmin: string
+    }
+  })
+
+  const clerkUser = useUser();
+
+  useEffect(() => {
+    axios.post(`/api/user`).catch(() => null)
+    setUser(clerkUser.user as any)
+  }, [clerkUser])
+
+
   const router = useRouter()
   const routes = [
-    {
-      icon: Lock,
-      href:'/admin',
-      label: 'Admin'
-    },
     {
       icon: Home,
       href: '/',
@@ -54,8 +70,8 @@ export function MobileNav() {
         <SheetTrigger asChild>
           <Button variant="ghost"><Menu /></Button>
         </SheetTrigger>
-        <SheetContent className="w-[250px] sm:w-[300px]">
-          <div className="space-y-4 flex flex-col h-full text-primary">
+        <SheetContent className="w-[150px] ">
+          <div className="space-y-4 flex flex-col h-full text-primary mt-24">
             <div className="flex-1 flex justify-center">
               <div className="space-y-2">
                 {routes.map((route) => (
@@ -94,6 +110,18 @@ export function MobileNav() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
+                {user?.publicMetadata?.isAdmin && (
+                  <div
+                    onClick={() => router.push('/admin')}
+                    key={Math.random()}
+                    className="text-muted-foreground text-xs group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-primary hover:bg-primary/10 rounded-lg transition"
+                  >
+                    <div className="flex flex-col gap-y-2 items-center flex-1">
+                      <Lock className="h-5 w-5" />
+                      {'Admin'}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

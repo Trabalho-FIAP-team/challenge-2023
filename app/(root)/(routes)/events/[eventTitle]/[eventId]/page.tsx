@@ -1,6 +1,7 @@
 import { events } from "@/data"
 import { NotificationCard } from "@/app/(root)/(routes)/events/[eventTitle]/[eventId]/components/notification-card";
 import Image from "next/image";
+import BackButton from "@/components/back-button";
 
 interface EventIdProps {
   params: {
@@ -34,33 +35,34 @@ const EventIdPage = ({ params }: EventIdProps) => {
 
   return (
     <div>
-      <div className="flex justify-center items-center">
-        <Image
-          className="rounded-xl"
-          src={image}
-          alt='Imagem EventId'
-          width={1520}
-          height={200}
-        />
-      </div>
+      <BackButton />
+        <div className="flex justify-center items-center">
+          <Image
+            className="rounded-xl"
+            src={image}
+            alt='Imagem EventId'
+            width={1520}
+            height={200}
+          />
+        </div>
 
-      <div className="flex items-center justify-center">
-        <div className="lg:mx-40 mt-12 grid md:grid-cols-3 sm:grid-cols-1 gap-10">
-          <div className="col-span-2">
-            <h1 className="mt-4 mb-3 text-2xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl md:text-left text-center">
-              {decodeString(params.eventTitle)}
-            </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left overflow-hidden">
-              {getTextByEventId(params.eventId)}
-              {getTextByEventId(params.eventId)}
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <NotificationCard eventTitle={decodeString(params.eventTitle)} />
+        <div className="flex items-center justify-center">
+          <div className="lg:mx-40 mt-12 grid md:grid-cols-3 sm:grid-cols-1 gap-10">
+            <div className="col-span-2">
+              <h1 className="mt-4 mb-3 text-2xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl md:text-left text-center">
+                {decodeString(params.eventTitle)}
+              </h1>
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left overflow-hidden">
+                {getTextByEventId(params.eventId)}
+                {getTextByEventId(params.eventId)}
+              </p>
+            </div>
+            <div className="flex justify-center items-center ml-8 w-full">
+              <NotificationCard eventTitle={decodeString(params.eventTitle)} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
