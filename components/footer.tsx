@@ -52,7 +52,7 @@ const Footer = React.forwardRef<
             <div>
                 <Logo />
 
-                <p className="mt-4 max-w-xs text-gray-500">
+                <p className="mt-4 max-w-xs text-gray-700 dark:text-gray-300">
                     Buscamos criar um ambiente colaborativo e
                     inspirador, onde as relações interpessoais se
                     fortalecem e a consciência ambiental cresce
@@ -60,10 +60,10 @@ const Footer = React.forwardRef<
 
                 <ul className="mt-8 flex gap-4">
                     <Link href="">
-                        <Linkedin className="text-gray-700 transition hover:opacity-75"  />
+                        <Linkedin className="text-gray-700 dark:text-gray-200 transition hover:opacity-75"  />
                     </Link>
                     <Link href="">
-                        <Facebook className="text-gray-700 transition hover:opacity-75"  />
+                        <Facebook className="text-gray-700 dark:text-gray-200 transition hover:opacity-75"  />
                     </Link>
                 </ul>
             </div>
@@ -73,7 +73,7 @@ const Footer = React.forwardRef<
                     <FooterMenuTitle>Conheça Mais</FooterMenuTitle>
                     {links['conhecaMais'].map((item, index) => (
                         <FooterMenuItem key={item.href}>
-                            <Link href={'/' + item.href} legacyBehavior passHref>
+                            <Link href={'/'} legacyBehavior passHref>
                                 <FooterMenuLink>
                                     {item.title}
                                 </FooterMenuLink>
@@ -86,7 +86,7 @@ const Footer = React.forwardRef<
                     <FooterMenuTitle>Informações Legais</FooterMenuTitle>
                     {links['informacoesLegais'].map((item, index) => (
                         <FooterMenuItem key={item.href}>
-                            <Link href={'/' + item.href} legacyBehavior passHref>
+                            <Link href={'/'} legacyBehavior passHref>
                                 <FooterMenuLink>
                                     {item.title}
                                 </FooterMenuLink>
@@ -98,7 +98,7 @@ const Footer = React.forwardRef<
 
         </div>
 
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-gray-500 dark:text-gray-200">
             Design by <span>@grupo-ecoconnect</span>
         </p>
 

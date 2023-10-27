@@ -22,14 +22,14 @@ const AboutPage = () => {
 					<h1 className="border-b-2 justify-start lg:ml-40 text-3xl font-extrabold text-gray-900 flex dark:text-white md:text-5xl lg:text-5xl mt-[-4%]">Sobre Nós!</h1>
 				</div>
 
-				<p className="text-gray-600 dark:text-gray-400">
+				<p className="text-gray-600 dark:text-gray-300">
 					A Schneider Electric é uma líder global em gestão de energia e automação. Com mais de um século de experiência no setor,
 					nossa empresa está comprometida em proporcionar soluções inovadoras que impulsionam a eficiência energética e sustentabilidade
 					em todo o mundo. Fundada em 1836 por Adolphe Schneider e Joseph-Eugene Schneider, a Schneider Electric cresceu para se tornar uma organização
 					verdadeiramente global, presente em mais de 100 países e atendendo a uma ampla variedade de setores industriais, comerciais e residenciais.
 				</p>
 
-				<p className="text-gray-600 dark:text-gray-400">
+				<p className="text-gray-600 dark:text-gray-300">
 					Nossa missão é capacitar as pessoas a tirar o máximo proveito de sua energia e recursos, promovendo um futuro mais verde e sustentável.
 					Investimos constantemente em pesquisa e desenvolvimento para criar soluções inovadoras que ajudam nossos clientes a otimizar o consumo de energia,
 					melhorar a eficiência operacional e reduzir seu impacto ambiental. A Schneider Electric também é pioneira
@@ -42,7 +42,7 @@ const AboutPage = () => {
 						Staff
 					</h2>
 
-					<p className="text-gray-700">
+					<p className="text-gray-700 dark:text-gray-300">
 						Conheça nossos incríveis profissionais!
 					</p>
 
@@ -59,13 +59,13 @@ const AboutPage = () => {
 						Nossos escritórios
 					</h2>
 
-					<p className="text-gray-700 dark:text-gray-400">
+					<p className="text-gray-700 dark:text-gray-300">
 						Na Schneider Electric, acreditamos que o talento é a chave para impulsionar a inovação e moldar o futuro.
 						Se você é apaixonado por desafios, está comprometido com a excelência e deseja fazer parte de uma equipe global que está
 						transformando o mundo da energia e automação, então você está no lugar certo.
 					</p>
 
-					<p className="text-gray-700 dark:text-gray-400">
+					<p className="text-gray-700 dark:text-gray-300">
 						Cada um de nossos escritórios é um ambiente vibrante e colaborativo, onde profissionais talentosos se reúnem para enfrentar os
 						desafios mais complexos da indústria. Em todos os cantos do globo, estamos comprometidos com a criação de soluções que impulsionam o
 						progresso e promovem um futuro mais verde e conectado.

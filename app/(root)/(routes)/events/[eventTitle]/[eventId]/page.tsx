@@ -57,7 +57,7 @@ const EventIdPage = ({ params }: EventIdProps) => {
                 {getTextByEventId(params.eventId)}
               </p>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center items-center ml-8 w-full">
               <NotificationCard eventTitle={decodeString(params.eventTitle)} />
             </div>
           </div>

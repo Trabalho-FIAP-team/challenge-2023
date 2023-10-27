@@ -17,13 +17,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useUser } from "@clerk/nextjs"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import axios from "axios"
 
 
 export function MobileNav() {
 
-  const [user, setUser] = React.useState<{
+  const [user, setUser] = useState<{
     publicMetadata: {
       isAdmin: string
     }
@@ -35,7 +35,7 @@ export function MobileNav() {
 
   const clerkUser = useUser();
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios.post(`/api/user`).catch(() => null)
     setUser(clerkUser.user as any)
   }, [clerkUser])

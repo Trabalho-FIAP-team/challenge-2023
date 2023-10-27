@@ -4,7 +4,7 @@ import { events } from '@/data'
 
 const EventsPage = () => {
     return (
-      <main className='mt-[-15%]'>
+      <main>
         <div className='flex items-center justify-start '>
           <BackButton />
           <h1 className="border-b-2 justify-start lg:ml-40 text-2xl font-extrabold text-gray-900 flex dark:text-white md:text-5xl lg:text-5xl mt-[-4%]">Todos os eventos!</h1>

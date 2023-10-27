@@ -36,7 +36,7 @@ export function Notifications() {
                         <Badge variant="default" value={notifications.length}></Badge>
                     </div>
                 </PopoverTrigger>
-                <PopoverContent className="w-[400px] sm:w-[200px] overflow-y-auto pb-1 mb-1  flex flex-col">
+                <PopoverContent className="w-[250px] md:w-[400px] overflow-y-auto pb-4 mb-1  flex flex-col">
 
                     <div className="py-2 flex flex-row items-center justify-between w-full p-1.5">
                         <h2 className="text-lg">Suas notificações ({notifications.length})</h2>

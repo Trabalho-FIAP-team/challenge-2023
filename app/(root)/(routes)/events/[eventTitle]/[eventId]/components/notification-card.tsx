@@ -56,33 +56,25 @@ export function NotificationCard({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(sendEmail)} className="w-full space-y-6">
-        <div>
-          <h3 className="mb-4 text-lg font-medium"></h3>
-          <div className="space-y-4">
-            <FormField
-              control={form.control}
-              name="notifications"
-              render={({ field }) => (
-                <div className="flex flex-col justify-center items-center">
-                  <FormItem className="flex flex-rowitems-center justify-between rounded-lg border p-3 shadow-sm">
-                    <div className="space-y-0.5">
-                      <FormLabel>Inscrição no(a) {eventTitle}</FormLabel>
-                      <FormDescription>
-                        Quer receber emails e atualizações sobre esse evento?
-                      </FormDescription>
-                    </div>
-                    <div>
-                      <Button
-                        disabled={isLoading}
-                      >
-                        {isLoading ? 'Sending...' : 'Submit'}
-                      </Button>
-                    </div>
-                  </FormItem>
-                </div>
-              )}
-            />
-          </div>
+        <div className="space-y-4">
+          <FormField
+            control={form.control}
+            name="notifications"
+            render={({ field }) => (
+              <div className="dlex justify-center items-center">
+                <FormItem className="items-center justify-between rounded-lg border p-3 shadow-sm">
+                  <div className="space-y-0.5">
+                    <FormLabel>Inscrição no(a) {eventTitle}</FormLabel>
+                  </div>
+                  <Button
+                    disabled={isLoading}
+                  >
+                    {isLoading ? 'Inscrevendo...' : 'Receber Notificações'}
+                  </Button>
+                </FormItem>
+              </div>
+            )}
+          />
         </div>
       </form>
     </Form>
