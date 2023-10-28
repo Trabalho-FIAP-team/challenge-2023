@@ -66,9 +66,9 @@ export function MainNav() {
               </li>
               {events.slice(0, 3).map((event) => (
                 <NavigationMenuContentItem
-                  key={event.eventTitle}
-                  title={event.eventTitle}
-                  href={`/events/${event.eventTitle}/${event.eventId}`}
+                  key={event.id}
+                  title={event.title}
+                  href={`/events/${event.title}/${event.eventId}`}
                 >
                   teste teste teste
                 </NavigationMenuContentItem>
