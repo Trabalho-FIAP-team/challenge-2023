@@ -7,7 +7,8 @@ import { Bell, CalendarDays, SeparatorHorizontal, Settings, ShieldAlert } from "
 import { Card, CardDescription, CardHeader, CardIcon, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Notification, Event } from "@/types";
+import { Notification } from "@/types";
+import { Event } from "@prisma/client";
 import { Badge } from "@/components/ui/badge";
 
 export function Notifications() {
@@ -20,7 +21,7 @@ export function Notifications() {
                 return setNotifications([{ icon: <ShieldAlert className="h-5 w-5"></ShieldAlert>, title: 'Erro', description: 'Não foi possível carregar notificações' }]);
             }
 
-            setNotifications(response.data.map(event => ({ icon: <CalendarDays className="h-5 w-5"></CalendarDays>, title: 'Evento se aproximando!', description: event.eventTitle })));
+            setNotifications(response.data.map(event => ({ icon: <CalendarDays className="h-5 w-5"></CalendarDays>, title: 'Evento se aproximando!', description: event.title })));
         });
     }, []);
 
