@@ -94,7 +94,7 @@ export default function EmailTemplate({
 
             <Section className="mt-4 text-center text-zinc-400">
               <Text className="my-4">
-                &quotA melhor maneira de começar é começar.&quot Marque sua participação no evento EcoConnect e esteja pronto para uma experiência enriquecedora. Você ficará surpreso com o que aprenderá! 🌟
+                &quot;A melhor maneira de começar é começar.&quot; Marque sua participação no evento EcoConnect e esteja pronto para uma experiência enriquecedora. Você ficará surpreso com o que aprenderá! 🌟
                 <Link
                   href={`mailto:${fromEmail}`}
                   className="text-green-500 underline"
