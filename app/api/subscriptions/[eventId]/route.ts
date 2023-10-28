@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const prisma = new PrismaClient();
 
-export async function DELETE(request: NextRequest) {
+export async function DELETE(request: NextRequest, { params }: { params: { eventId: string }}) {
     try {
 
         const authUser = auth();
@@ -16,9 +16,7 @@ export async function DELETE(request: NextRequest) {
 
         if (!userId) return NextResponse.error();
 
-        const eventId = request.nextUrl.searchParams.get('eventId');
-
-        if (!eventId) return NextResponse.error();
+        if (!params.eventId) return NextResponse.error();
 
         const user = await prisma.user.findUnique({
             where: {
@@ -28,7 +26,7 @@ export async function DELETE(request: NextRequest) {
 
         if (!user) return NextResponse.error();
 
-        const events = user?.likesIDs.filter(like => like !== eventId)
+        const events = user?.likesIDs.filter(like => like !== params.eventId)
 
         await prisma.user.update({
             where: {
@@ -47,19 +45,17 @@ export async function DELETE(request: NextRequest) {
     }
 }
 
-export async function POST(request: NextRequest) {
+export async function POST(request: NextRequest, { params }: { params: { eventId: string }}) {
     try {
 
         const authUser = auth();
         const userId = authUser.sessionClaims?.sub
-
-        const eventId = request.nextUrl.searchParams.get('eventId');
-
-        if (!userId || !eventId) return NextResponse.error();
+        
+        if (!userId || !params.eventId) return NextResponse.error();
 
         const event = await prisma.event.findUnique({
             where: {
-                id: eventId
+                id: params.eventId
             }
         })
 

@@ -21,11 +21,20 @@ export async function GET() {
             }
         })
 
+        if (!user) return NextResponse.error();
+
+        const events = await prisma.event.findMany({
+            where: {
+                usersIDs: {
+                    has: user.id
+                }
+            }
+        })
+
         // TODO: remover eventos passados
-        return NextResponse.json(user.events);
+        return NextResponse.json(events);
 
     } catch (error) {
-        console.log(error)
         return NextResponse.json({ error });
     }
 }
