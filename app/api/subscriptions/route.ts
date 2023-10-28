@@ -2,14 +2,12 @@ import {NextResponse} from 'next/server';
 import { auth, clerkClient } from '@clerk/nextjs';
 import {PrismaClient} from "@prisma/client";
 import { Resend } from 'resend';
+import { prisma } from '@/lib/db';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const prisma = new PrismaClient();
-
-export async function GET() {
+export async function POST() {
     try {
-
         const authUser = auth();
         const userId = authUser.sessionClaims?.sub
 
@@ -18,6 +16,9 @@ export async function GET() {
         const user = await prisma.user.findUnique({
             where: {
                 externalId: userId,
+            },
+            include: {
+                events: true
             }
         })
 

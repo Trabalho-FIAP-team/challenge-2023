@@ -1,8 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import {PrismaClient} from "@prisma/client";
 import {auth} from "@clerk/nextjs";
-
-const prisma = new PrismaClient()
+import { prisma } from "@/lib/db";
 
 export async function GET(request: NextRequest, { params }: { params: { eventId: string }}) {
 

@@ -1,17 +1,23 @@
 "use client"
-
 import { NotificationCard } from "@/app/(root)/(routes)/events/[eventTitle]/[eventId]/components/notification-card";
 import Image from "next/image";
 import BackButton from "@/components/back-button";
-import { useEffect, useState } from "react";
 import axios from "axios";
-import {Event} from "@prisma/client";
+import { useEffect, useState } from "react";
+import { Event } from '@prisma/client'
+
+interface IEventIdParams {
+eventId: string,
+ eventTitle: string,
+}
 
 interface EventIdProps {
-  params: {
-    eventId: string,
-    eventTitle: string,
-  }
+  params: IEventIdParams
+}
+
+export interface IEventData extends IEventIdParams {
+  text: string;
+  image: string
 }
 
 const EventIdPage = ({ params }: EventIdProps) => {

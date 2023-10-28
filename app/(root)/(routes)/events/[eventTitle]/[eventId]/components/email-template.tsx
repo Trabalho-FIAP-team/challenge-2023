@@ -32,8 +32,6 @@ export default function EmailTemplate({
   thumb,
   eventAuthor,
   eventData,
-  eventText,
-  eventId,
   fromEmail
 }: ReminderEmailProps) {
   const previewText = `Olá ${userName}, Confirmação da Sua inscrição no evento ${eventTitle}`;
