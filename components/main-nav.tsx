@@ -10,9 +10,10 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Flame } from "lucide-react"
-import { events, games } from "@/data"
+import { games } from "@/data"
 import axios from "axios"
 import { useUser } from "@clerk/nextjs"
+import { Event } from "@prisma/client";
 
 export function MainNav() {
   const [user, setUser] = React.useState<{
@@ -26,6 +27,14 @@ export function MainNav() {
   })
 
   const clerkUser = useUser();
+
+  const [events, setEvents] = React.useState<Event[]>([]);
+
+  React.useEffect(() => {
+      axios.get("/api/events").then((response) => response.data).then((events) => {
+          setEvents(events);
+      }).catch((e) => console.error("Não foi possível carregar eventos"));
+  }, []);
 
   React.useEffect(() => {
     axios.post(`/api/user`).catch(() => null)
@@ -68,7 +77,7 @@ export function MainNav() {
                 <NavigationMenuContentItem
                   key={event.id}
                   title={event.title}
-                  href={`/events/${event.title}/${event.eventId}`}
+                  href={`/events/${event.title}/${event.id}`}
                 >
                   teste teste teste
                 </NavigationMenuContentItem>
