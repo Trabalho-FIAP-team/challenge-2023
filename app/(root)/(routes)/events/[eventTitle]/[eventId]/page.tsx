@@ -1,13 +1,23 @@
-import { events } from "@/data"
+"use client"
 import { NotificationCard } from "@/app/(root)/(routes)/events/[eventTitle]/[eventId]/components/notification-card";
 import Image from "next/image";
 import BackButton from "@/components/back-button";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Event } from '@prisma/client'
+
+interface IEventIdParams {
+eventId: string,
+ eventTitle: string,
+}
 
 interface EventIdProps {
-  params: {
-    eventId: string,
-    eventTitle: string,
-  }
+  params: IEventIdParams
+}
+
+export interface IEventData extends IEventIdParams {
+  text: string;
+  image: string
 }
 
 const EventIdPage = ({ params }: EventIdProps) => {
@@ -21,17 +31,23 @@ const EventIdPage = ({ params }: EventIdProps) => {
     }
   }
 
-  function getImageByEventId(eventId: string): string | undefined {
-    const event = events.find((e) => e.eventId === eventId);
-    return event ? event.eventImage : undefined;
-  }
+  const [event, setEvent] = useState<IEventData>({} as IEventData)
 
-  function getTextByEventId(eventId: string): string | undefined {
-    const event = events.find((e) => e.eventId === eventId);
-    return event ? event.eventText : undefined;
-  }
-
-  const image: string = getImageByEventId(params.eventId) || '';
+  useEffect(() => {
+    if(!event?.text) {
+      axios.get<Event>(`/api/events/${params.eventId}`).then((eventResponse) => {
+        if(eventResponse.data) {
+          const eventData = eventResponse.data;
+          setEvent({
+            eventId: eventData.id,
+            eventTitle: eventData.title,
+            image: eventData.image,
+            text: eventData.text,
+          })
+        }
+      }).catch(console.log)
+    }
+  }, [])
 
   return (
     <div>
@@ -39,7 +55,7 @@ const EventIdPage = ({ params }: EventIdProps) => {
         <div className="flex justify-center items-center">
           <Image
             className="rounded-xl"
-            src={image}
+            src={event.image}
             alt='Imagem EventId'
             width={1520}
             height={200}
@@ -53,12 +69,11 @@ const EventIdPage = ({ params }: EventIdProps) => {
                 {decodeString(params.eventTitle)}
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left overflow-hidden">
-                {getTextByEventId(params.eventId)}
-                {getTextByEventId(params.eventId)}
+                {event.text}
               </p>
             </div>
             <div className="flex justify-center items-center ml-8 w-full">
-              <NotificationCard eventTitle={decodeString(params.eventTitle)} />
+              <NotificationCard eventTitle={decodeString(params.eventTitle)} eventId={params.eventId} />
             </div>
           </div>
         </div>

@@ -1,12 +1,10 @@
 import {auth, clerkClient} from "@clerk/nextjs";
 import {NextRequest, NextResponse} from "next/server";
 import { Resend } from 'resend';
-import {PrismaClient} from "@prisma/client";
 import EmailTemplate from "@/app/(root)/(routes)/events/[eventTitle]/[eventId]/components/email-template";
+import { prisma } from "@/lib/db";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-const prisma = new PrismaClient();
 
 export async function DELETE(request: NextRequest) {
     try {
@@ -47,13 +45,13 @@ export async function DELETE(request: NextRequest) {
     }
 }
 
-export async function POST(request: NextRequest) {
+export async function POST(request: NextRequest, {params}: { params: { eventId: string}}) {
     try {
 
         const authUser = auth();
         const userId = authUser.sessionClaims?.sub
 
-        const eventId = request.nextUrl.searchParams.get('eventId');
+        const eventId = params.eventId
 
         if (!userId || !eventId) return NextResponse.error();
 

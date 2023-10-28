@@ -25,10 +25,12 @@ const FormSchema = z.object({
 
 interface NotificationCardProps {
   eventTitle: string | null
+  eventId: string | null
 }
 
 export function NotificationCard({
-  eventTitle
+  eventTitle,
+  eventId
 }: NotificationCardProps) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -39,7 +41,7 @@ export function NotificationCard({
   const sendEmail = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.post('/api/subscriptions');
+      const response = await axios.post(`/api/subscriptions/${eventId}`);
       if (response.status === 200) {
 
         toast.success('Verifique a caixa de entrada do seu Email!');

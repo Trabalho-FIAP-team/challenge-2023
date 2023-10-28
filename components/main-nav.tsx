@@ -10,9 +10,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Flame } from "lucide-react"
-import { events, games } from "@/data"
+import { games } from "@/data"
 import axios from "axios"
 import { useUser } from "@clerk/nextjs"
+import { IEventData } from "@/app/(root)/(routes)/events/[eventTitle]/[eventId]/page"
+import { Event} from '@prisma/client'
 
 export function MainNav() {
   const [user, setUser] = React.useState<{
@@ -31,6 +33,26 @@ export function MainNav() {
     axios.post(`/api/user`).catch(() => null)
     setUser(clerkUser.user as any)
   }, [clerkUser])
+
+  
+  const [events, setEvents] = React.useState<IEventData[]>([] as IEventData[])
+
+  React.useEffect(() => {
+    if(!events.length) {
+      axios.get<Event[]>(`/api/events`).then((eventsResponse) => {
+        if(eventsResponse.data) {
+          const eventsData = eventsResponse.data.map((event) => ({
+            text: event.text,
+            image: event.image, 
+            eventId: event.id,
+            eventTitle: event.title,
+          }))
+
+          setEvents(eventsData)
+        }
+      }).catch(console.log)
+    }
+  }, [])
   
   return (
     <NavigationMenu className="md:flex hidden">
@@ -70,7 +92,7 @@ export function MainNav() {
                   title={event.eventTitle}
                   href={`/events/${event.eventTitle}/${event.eventId}`}
                 >
-                  teste teste teste
+                 {event.text}
                 </NavigationMenuContentItem>
               ))}
             </ul>
