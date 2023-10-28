@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const prisma = new PrismaClient();
 
-export async function DELETE() {
+export async function DELETE(request: NextRequest) {
     try {
 
         const authUser = auth();
@@ -16,14 +16,31 @@ export async function DELETE() {
 
         if (!userId) return NextResponse.error();
 
+        const eventId = request.nextUrl.searchParams.get('eventId');
+
+        if (!eventId) return NextResponse.error();
+
         const user = await prisma.user.findUnique({
             where: {
                 externalId: userId,
+            },
+        })
+
+        if (!user) return NextResponse.error();
+
+        const events = user?.likesIDs.filter(like => like !== eventId)
+
+        await prisma.user.update({
+            where: {
+                id: user?.id,
+            },
+            data: {
+                likesIDs: events,
             }
         })
 
         // TODO: remover eventos passados
-        return NextResponse.json(user.events);
+        return NextResponse.json({});
 
     } catch (error) {
         return NextResponse.json({ error });
@@ -46,14 +63,29 @@ export async function POST(request: NextRequest) {
             }
         })
 
-        event.users?.push(user);
-
-        prisma.event.update(event);
-
         if (!event) return NextResponse.error();
 
-        const user = await clerkClient.users.getUser(userId);
-        const email = user.emailAddresses[0].emailAddress
+        const user = await prisma.user.findUnique({
+            where: {
+                externalId: userId
+            }
+        })
+
+        if (!user) return NextResponse.error();
+
+        event.usersIDs?.push(user.id);
+
+        prisma.event.update({
+            where: {
+                id: event.id,
+            },
+            data: {
+                usersIDs: event.usersIDs,
+            }
+        });
+
+        const clerkUser = await clerkClient.users.getUser(userId);
+        const email = clerkUser.emailAddresses[0].emailAddress
 
         if (!email) return NextResponse.error();
 

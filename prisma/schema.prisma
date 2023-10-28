@@ -20,7 +20,7 @@ model User {
   events    Event[]   @relation(name: "subscribers", fields: [eventsIDs], references: [id])
 
   likesIDs String[]   @db.ObjectId
-  likes    Event[]    @relation(name: "likes", references: [id])
+  likes    Event[]    @relation(name: "likes", fields: [likesIDs], references: [id])
 }
 
 enum UserRole {
