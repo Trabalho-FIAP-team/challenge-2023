@@ -52,7 +52,7 @@ export function MainNav() {
         }
       }).catch(console.log)
     }
-  }, [])
+  }, [events.length])
   
   return (
     <NavigationMenu className="md:flex hidden">

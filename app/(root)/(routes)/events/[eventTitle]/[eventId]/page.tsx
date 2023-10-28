@@ -47,7 +47,7 @@ const EventIdPage = ({ params }: EventIdProps) => {
         }
       }).catch(console.log)
     }
-  }, [])
+  }, [event?.text, params.eventId])
 
   return (
     <div>
